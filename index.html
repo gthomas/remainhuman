@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title> </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
+  <style>
+    body, html {
+        overflow-x: hidden;
+    }
+    @font-face {
+        font-family: AeonMonoSemiBold;
+        src: url(./fonts/Aeion-Mono-Semi-Bold.otf);
+    }
+    @font-face {
+        font-family: AeonMono;
+        src: url(./fonts/Aeion-Mono-Regular.otf);
+    }
+    @font-face {
+        font-family: FKGroteskMono;
+        src: url(./fonts/FKGroteskSemiMonoTrial-Regular.otf);
+    }
+    .page {
+        height: 100vh;
+    }
+    .hero {
+        background-image: url(./img/BGTOP.png);
+        background-position: left top;
+        background-size: cover;
+    }
+    .title {
+        font-family: AeonMonoSemiBold;
+    }
+    body {
+        background: #7795bb;
+        font-family: 'Courier New', Courier, monospace;
+        color: #cbfe19;
+    }
+    .border {
+        position: relative;
+    }
+    .border::after{
+        content:'';
+        position:absolute;
+        width: 100%;
+        height: 0;    
+        left:0;
+        bottom:3px;
+        border-bottom: 1px solid #cbfe19;  
+    }
+    .header {
+        background-image: url(./img/title.png);
+        background-position: left bottom;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .links {
+        font-family: AeonMono;
+    }
+    .links a:hover {
+        background-color: black;
+    }
+
+    .heroimage {
+        height: 100%;
+    }
+    .heroimagemobile {
+        background-image: url(./img/hero.png);
+        background-position: left bottom;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .maincontent {
+        flex-grow: 1;
+        z-index: 999;
+    }
+    
+    .footer {
+        z-index: 999;
+    }
+
+    .marquee {
+                height: 100%;
+                position: relative;
+                width: auto;
+            }
+            
+            .marquee p {
+                font-family: FKGroteskMono;
+                position: absolute;
+                width: max-content;
+                height: 100%;
+                margin: 0;
+                line-height: 50px;
+                vertical-align: center;
+                text-align: left;
+                -moz-transform: translateX(100%);
+                -webkit-transform: translateX(100%);
+                transform: translateX(100%);
+                -moz-animation: scroll-left 2s linear infinite;
+                -webkit-animation: scroll-left 2s linear infinite;
+                animation: scroll-left 20s linear infinite;
+            }
+            @-moz-keyframes scroll-left {
+                0% {
+                    -moz-transform: translateX(100%);
+                }
+                100% {
+                    -moz-transform: translateX(-100%);
+                }
+            }
+            
+            @-webkit-keyframes scroll-left {
+                0% {
+                    -webkit-transform: translateX(100%);
+                }
+                100% {
+                    -webkit-transform: translateX(-100%);
+                }
+            }
+            
+            @keyframes scroll-left {
+                0% {
+                    -moz-transform: translateX(100%);
+                    -webkit-transform: translateX(100%);
+                    transform: translateX(100%);
+                }
+                100% {
+                    -moz-transform: translateX(-100%);
+                    -webkit-transform: translateX(-100%);
+                    transform: translateX(-100%);
+                }
+            }
+               
+
+@media screen and (max-width: 30em) {
+    .humantexttitle {
+        margin-bottom: -0.5rem;
+    }
+}
+
+@media screen and (min-width: 30em) and (max-width: 60em) {
+  .humantexttitle {
+    margin-bottom: -1.1rem;
+  }
+}
+
+@media screen and (min-width: 60em) {
+  .humantexttitle {
+    margin-bottom: -1.1rem;
+  }
+}
+    
+
+  </style>
+  <body>
+    <div class="pagecontainer flex flex-column" style="overflow-x: hidden;">
+        <div class="flex flex-column page hero">
+            <div class="dn db-m db-l absolute bottom-0 h-100" style="left: 50%;">
+                <img class="heroimage" src="./img/hero.png" />
+            </div>
+            <div class="heroimagemobile dn-m dn-l absolute bottom-0 h-75 w-60" style="left: 40%;">
+            </div>
+            <div>
+                <div class="h4 w-100 flex items-end bb">
+                    <div class="pl3 pl5-m pl5-l f4 f2-l f2-m title" style="margin-bottom: -0.20em;">HOW TO STAY</div>
+                    <img class="humantexttitle pl1 pl2-m pl2-l m2-s h2 h3-m h3-l" src="./img/HUMANTEXT.png"></img>
+                    <div class="links tr flex flex-column justify-center h-100 w-15 pr3" style="margin-left: auto;">
+                            <span class="db dn-m dn-l mb2" style="flex-grow: 1"></span>
+                            <a>PODCAST</a>
+                            <a>PROGRAMS</a>
+                            <a>ABOUT</a>
+                    </div>
+                </div>
+            </div>
+            <div class="relative maincontent w-100 h4">
+                    <div class="heroblurb pt7 pt6-m pt6-l f5 f4-m f4-l pl3 pl5-m pl5-l pr3 pr0-m pr0-l w-60 w-30-m w-30-l">
+                        Human creativity 
+                        <span class="white">has never been more important especially in the face of technology.</span>
+                    </div>
+            </div>
+            <div class="footer w-100">
+                <div class="bottom-0 bt bb h3 w-100">
+                    <div class="marquee">
+                    <p>“I know you’re all worried about machines becoming more like humans. I think we should be more worried about humans becoming more like machines.”</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page"></div>
+    </div>
+  </body>
+</html>
