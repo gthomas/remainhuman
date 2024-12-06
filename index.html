@@ -3,158 +3,12 @@
   <title> </title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
-  <style>
-    body, html {
-        overflow-x: hidden;
-    }
-    @font-face {
-        font-family: AeonMonoSemiBold;
-        src: url(./fonts/Aeion-Mono-Semi-Bold.otf);
-    }
-    @font-face {
-        font-family: AeonMono;
-        src: url(./fonts/Aeion-Mono-Regular.otf);
-    }
-    @font-face {
-        font-family: FKGroteskMono;
-        src: url(./fonts/FKGroteskSemiMonoTrial-Regular.otf);
-    }
-    .page {
-        height: 100vh;
-    }
-    .hero {
-        background-image: url(./img/BGTOP.png);
-        background-position: left top;
-        background-size: cover;
-    }
-    .title {
-        font-family: AeonMonoSemiBold;
-    }
-    body {
-        background: #7795bb;
-        font-family: 'Courier New', Courier, monospace;
-        color: #cbfe19;
-    }
-    .border {
-        position: relative;
-    }
-    .border::after{
-        content:'';
-        position:absolute;
-        width: 100%;
-        height: 0;    
-        left:0;
-        bottom:3px;
-        border-bottom: 1px solid #cbfe19;  
-    }
-    .header {
-        background-image: url(./img/title.png);
-        background-position: left bottom;
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
-    .links {
-        font-family: AeonMono;
-    }
-    .links a:hover {
-        background-color: black;
-    }
-
-    .heroimage {
-        height: 100%;
-    }
-    .heroimagemobile {
-        background-image: url(./img/hero.png);
-        background-position: left bottom;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-
-    .maincontent {
-        flex-grow: 1;
-        z-index: 999;
-    }
-    
-    .footer {
-        z-index: 999;
-    }
-
-    .marquee {
-                height: 100%;
-                position: relative;
-                width: auto;
-            }
-            
-            .marquee p {
-                font-family: FKGroteskMono;
-                position: absolute;
-                width: max-content;
-                height: 100%;
-                margin: 0;
-                line-height: 50px;
-                vertical-align: center;
-                text-align: left;
-                -moz-transform: translateX(100%);
-                -webkit-transform: translateX(100%);
-                transform: translateX(100%);
-                -moz-animation: scroll-left 2s linear infinite;
-                -webkit-animation: scroll-left 2s linear infinite;
-                animation: scroll-left 20s linear infinite;
-            }
-            @-moz-keyframes scroll-left {
-                0% {
-                    -moz-transform: translateX(100%);
-                }
-                100% {
-                    -moz-transform: translateX(-100%);
-                }
-            }
-            
-            @-webkit-keyframes scroll-left {
-                0% {
-                    -webkit-transform: translateX(100%);
-                }
-                100% {
-                    -webkit-transform: translateX(-100%);
-                }
-            }
-            
-            @keyframes scroll-left {
-                0% {
-                    -moz-transform: translateX(100%);
-                    -webkit-transform: translateX(100%);
-                    transform: translateX(100%);
-                }
-                100% {
-                    -moz-transform: translateX(-100%);
-                    -webkit-transform: translateX(-100%);
-                    transform: translateX(-100%);
-                }
-            }
-               
-
-@media screen and (max-width: 30em) {
-    .humantexttitle {
-        margin-bottom: -0.5rem;
-    }
-}
-
-@media screen and (min-width: 30em) and (max-width: 60em) {
-  .humantexttitle {
-    margin-bottom: -1.1rem;
-  }
-}
-
-@media screen and (min-width: 60em) {
-  .humantexttitle {
-    margin-bottom: -1.1rem;
-  }
-}
-    
-
-  </style>
+  <link rel="stylesheet" href="./css/fonts.css">
+  <link rel="stylesheet" href="./css/marquee.css">
+  <link rel="stylesheet" href="./css/main.css">
   <body>
     <div class="pagecontainer flex flex-column" style="overflow-x: hidden;">
+        <!-- TOP PAGE -->
         <div class="flex flex-column page hero">
             <div class="dn db-m db-l absolute bottom-0 h-100" style="left: 50%;">
                 <img class="heroimage" src="./img/hero.png" />
@@ -165,29 +19,127 @@
                 <div class="h4 w-100 flex items-end bb">
                     <div class="pl3 pl5-m pl5-l f4 f2-l f2-m title" style="margin-bottom: -0.20em;">HOW TO STAY</div>
                     <img class="humantexttitle pl1 pl2-m pl2-l m2-s h2 h3-m h3-l" src="./img/HUMANTEXT.png"></img>
-                    <div class="links tr flex flex-column justify-center h-100 w-15 pr3" style="margin-left: auto;">
+                    <div class="links tr flex flex-column justify-center h-100 w-15 pr3">
                             <span class="db dn-m dn-l mb2" style="flex-grow: 1"></span>
                             <a>PODCAST</a>
-                            <a>PROGRAMS</a>
-                            <a>ABOUT</a>
+                            <a href="./programs.html">PROGRAMS</a>
+                            <a href="./index.html" class="active">ABOUT</a>
                     </div>
                 </div>
             </div>
-            <div class="relative maincontent w-100 h4">
-                    <div class="heroblurb pt7 pt6-m pt6-l f5 f4-m f4-l pl3 pl5-m pl5-l pr3 pr0-m pr0-l w-60 w-30-m w-30-l">
+            <div class="flex flex-column  maincontent w-100 h4">
+                    <div class="heroblurb pt7 pt7-m pt7-l f5 f4-m f4-l pl3 pl5-m pl5-l pr3 pr0-m pr0-l w-60 w-25-m w-25-l">
                         Human creativity 
                         <span class="white">has never been more important especially in the face of technology.</span>
+                    </div>
+                    <div style="flex-grow: 1;"></div>
+                    <div class="flex items-center flex-row pl3 pl5-m pl5-l h4 w-60 w-20-m w-20-l" style="min-width: 208px;">
+                        <a href="https://worldsveryfirst.com" class="h2 w2 social spotify mr3"></a>
+                        <a href="https://worldsveryfirst.com" class="h2 w2 social podcast mr3"></a>
+                        <a href="https://worldsveryfirst.com" class="h2 w2 social insta mr3"></a>
                     </div>
             </div>
             <div class="footer w-100">
                 <div class="bottom-0 bt bb h3 w-100">
                     <div class="marquee">
-                    <p>“I know you’re all worried about machines becoming more like humans. I think we should be more worried about humans becoming more like machines.”</p>
+                        <p>
+                            “Creativity is intelligence having fun” - Albert Einstein
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                            “In a world of rapid technological change, creativity is the ultimate advantage” - Ken Robinson
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                            “I know we’re all worried about machines becoming more like humans, but I think we should be more worried about humans becoming more like machines” - Nick Law
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="page"></div>
+        <!-- 2ND PAGE - ABOUT -->
+        <div class="flex flex-column page about bb">
+            <div class="flex row bb h3">
+                <div class="w-50 br"></div><div class="w-50"></div>
+            </div>
+            <div class="flex flex-column flex-row-m flex-row-l items-end" style="flex-grow: 1;">
+                <div class="h-50 w-100 w-50-m h-100-m w-50-l h-100-l bb br-m br-l heart"></div>
+                <div class="flex items-center h-50 w-100 w-50-m w-50-l h-100-m h-100-l">
+                    <div style="flex-grow: 1;"></div>
+                    <div class="flex flex-column w-90 w-60-m w-60-l">
+                        <span class="f6 mb1 sectionheading">ABOUT</span>
+                        <span class="f3 mb1 subtitle">CREATIVITY</span>
+                        <span class="f3 mb1 subtitle">AND THE 
+                            <img class="ml1 h2" src="./img/HUMANTEXT.png" style="margin-bottom: -0.5rem"></img>
+                        </span>
+                        <span class="f3 mb1 subtitle">EXPERIENCE</span>
+                        <span class="mt2 f6 sectionbody">
+                            Creativity; defined as the human ability to generate new and original ideas. It's perhaps 
+                            one of the most other-worldly aspects of the human experience. Magical, unstoppable and often 
+                            intangible, it's nothing short of extraordinary. So how do we use it, protect it and continue to value it?
+                            <br /> <br />
+                            How to Stay Human explores the role technology will play in our creative futures. How will 
+                            we find ways to interact with it, shape it and learn from it? And how might we uncover 
+                            practical ways to become more human (not less)  and more creative because of it. 
+                        </span>
+                    </div>
+                    <div style="flex-grow: 1;"></div>
+                </div>
+            </div>
+        </div>
+        <!-- 3RD PAGE - GRAHAM -->
+        <div class="flex flex-column page bb">
+            <div class="flex row bb h3">
+                <div class="w-50 br bg-yellow"></div><div class="w-50"></div>
+            </div>
+            <div class="flex flex-column flex-row-m flex-row-l items-end" style="flex-grow: 1;">
+                <div class="h-50 w-100 w-50-m h-100-m w-50-l h-100-l bb br-m br-l graham" style="flex-grow: 1;"></div>
+                <div class="flex items-center h-50 w-100 w-50-m w-50-l h-100-m h-100-l">
+                    <div style="flex-grow: 1;"></div>
+                    <div class="flex flex-column w-90 w-60-m w-60-l bio">
+                        <span class="f6 mb1 sectionheading">INTRODUCING</span>
+                        <span class="f3 mb1 subtitle mb2">DR GRAHAM MEAD</span>
+                        <span class="mt2 f6 sectionbody">
+                            Dr Graham Mead is a former medical doctor and respected leader in the field of human consciousness 
+                            and self-enquiry. For the past 30 years he's been exploring the practical nature and relationship 
+                            between consciousness, mind, internal energies and wellness in the body. A keen interest in non-linear 
+                            creativity and authentic, conscious relationship is prevalent throughout his work. 
+                            <br /><br />
+                            He is the creator of InnerSense, a comprehensive 9 week online self-awareness program.
+                            His clear, practical teachings designed to find ease in the body and mind, have positively benefited 
+                            the lives of many people across the globe.
+                        </span>
+                        <span class="button w4 mt4 flex flex-column">
+                            <a href="https://www.grahammead.com/" target="_blank" class="learnmore"></a>
+                        </span>
+                    </div>
+                    <div style="flex-grow: 1;"></div>
+                </div>
+            </div>
+        </div>
+         <!-- 4TH PAGE - MARIA -->
+        <div class="flex flex-column page" style="overflow-x: hidden;">
+            <div class="flex row bb h3">
+                <div class="w-50 br"></div><div class="w-50 bg-yellow"></div>
+            </div>
+            <div class="flex flex-column flex-row-m flex-row-l items-end" style="flex-grow: 1;">
+                <div class="h-50 w-100 w-50-m h-100-m w-50-l h-100-l bb br-m br-l maria"></div>
+                <div class="flex items-center h-50 w-100 w-50-m w-50-l h-100-m h-100-l">
+                    <div style="flex-grow: 1;"></div>
+                    <div class="flex flex-column w-90 w-60-m w-60-l bio">
+                        <span class="f6 mb1 sectionheading">INTRODUCING</span>
+                        <span class="f3 mb1 subtitle mb2">MARIA DEVEREUX</span>
+                        <span class="mt2 f6 sectionbody">
+                            Maria is a global creative leader working at the intersection of creativity, humanity and technology. 
+                            Currently based in Los Angeles, she's Head of Innovation and Executive Creative Director for Accenture Song. 
+                            Working at the forefront of emerging technologies, she remains focussed on the power of ideas to transform 
+                            business and culture. Recognised as one of the top 40 Executive Creative Directors globally, her work demonstrates 
+                            the power of creativity to create positive change in our world - for brands, organizations and most importantly, humans.
+                        </span>
+                        <span class="button w4 mt4 flex flex-column">
+                            <a href="https://www.mariadevereux.com" target="_blank" class="learnmore"></a>
+                        </span>
+                    </div>
+                    <div style="flex-grow: 1;"></div>
+                </div>
+            </div>
+        </div>
     </div>
   </body>
 </html>

@@ -1,0 +1,12 @@
+@font-face {
+    font-family: AeonMonoSemiBold;
+    src: url(../fonts/Aeion-Mono-Semi-Bold.otf);
+}
+@font-face {
+    font-family: AeonMono;
+    src: url(../fonts/Aeion-Mono-Regular.otf);
+}
+@font-face {
+    font-family: FKGroteskMono;
+    src: url(../fonts/FKGroteskSemiMonoTrial-Regular.otf);
+}

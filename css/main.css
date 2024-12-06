@@ -1,0 +1,224 @@
+body,
+html {
+    font-family: AeonMono;
+}
+
+.pagecontainer {
+    overflow-x: hidden;
+}
+
+.sectionheading {
+    font-family: AeonMono;
+}
+
+.sectionbody {
+    font-family: FKGroteskMono;
+    color: white;
+}
+
+.subtitle {
+    font-family: AeonMono;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+a.active {
+    background-color: black;
+}
+
+.page {
+    height: 100vh;
+}
+
+.hero {
+    background-image: url(../img/BGTOP.png);
+    background-position: left top;
+    background-size: cover;
+    background-attachment: fixed;
+    max-height: 100vh;
+}
+
+.about {
+    background-image: url(../img/BGMIDDLE.png);
+    background-position: right top;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.graham {
+    background-image: url(../img/GRAHAM.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.maria {
+    background-image: url(../img/MARIA.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.heart {
+    background-image: url(../img/HEART.png);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.picnic {
+    background-image: url(../img/PICNIC.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.title {
+    font-family: AeonMonoSemiBold;
+}
+
+body {
+    background: #7795bb;
+    font-family: 'Courier New', Courier, monospace;
+    color: #cbfe19;
+}
+
+.yellow {
+    color: #cbfe19;
+}
+
+.bg-yellow {
+    background-color: #cbfe19;
+    color: black;
+    border-color: #cbfe19;
+}
+
+.bg-yellow .sectionbody {
+    color: black;
+}
+.bg-yellow .sectionheading {
+    color: black;
+}
+
+.bg-yellow .subtitle {
+    color: black;
+}
+
+.border {
+    position: relative;
+}
+
+.border::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0;
+    left: 0;
+    bottom: 3px;
+    border-bottom: 1px solid #cbfe19;
+}
+
+.header {
+    background-image: url(../img/title.png);
+    background-position: left bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.links {
+    font-family: AeonMono;
+    margin-left: auto;
+}
+
+.links a:hover {
+    background-color: black;
+}
+
+.links a {
+    color:#cbfe19 !important;
+    text-decoration: none;
+}
+
+.heroimage {
+    height: 100%;
+}
+
+.heroimagemobile {
+    background-image: url(../img/hero.png);
+    background-position: left bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.maincontent {
+    flex-grow: 1;
+    z-index: 999;
+}
+
+.footer {
+    z-index: 999;
+}
+
+.social {
+    background-image: url(../img/socialicons.png);
+    background-size: cover;
+}
+
+.podcast {
+    background-position-x: 50%;
+}
+
+.spotify {
+    background-position-x: 0%;
+}
+
+.insta {
+    background-position-x: 100%;
+}
+
+.bio {
+    color: white;
+}
+
+.learnmore {
+    background-image: url("../img/LEARNMOREBUTTON.png");
+    background-repeat: no-repeat;
+    background-attachment: contain;
+    background-size: contain;
+    height: 2.5rem;
+}
+
+a:visited {
+    color: white;
+}
+
+
+
+@media screen and (max-width: 30em) {
+    .humantexttitle {
+        margin-bottom: -0.5rem;
+    }
+
+    .page {
+        height: 150vh;
+    }
+}
+
+@media screen and (min-width: 30em) and (max-width: 60em) {
+    .humantexttitle {
+        margin-bottom: -1.1rem;
+    }
+
+    .page {
+        min-width: 640px;
+        min-height: 480px;
+    }
+}
+
+@media screen and (min-width: 60em) {
+    .humantexttitle {
+        margin-bottom: -1.1rem;
+    }
+}
