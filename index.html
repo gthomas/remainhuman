@@ -17,6 +17,13 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="manifest" href="site.webmanifest" />
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script>
+            window.onload = function () {
+                var height = window.innerHeight;
+                console.log(window.innerHeight);
+                document.getElementsByClassName("hero")[0].style.height = window.innerHeight+"px";
+            }
+    </script>
 </head>
   <body>
     <div class="pagecontainer flex flex-column" style="overflow-x: hidden;">
@@ -25,13 +32,12 @@
             <div class="dn db-m db-l absolute bottom-0 h-100" style="left: 50%; pointer-events: none;">
                 <img class="heroimage" src="./img/hero.png" />
             </div>
-            <div class="heroimagemobile dn-m dn-l absolute bottom-0 w-60 h-75" style="left: 40%; pointer-events: none;"></div>
+            <div class="heroimagemobile db dn-m dn-l absolute bottom-0 w-60 h-75" style="left: 40%; pointer-events: none;"></div>
             <div>
                 <div class="h4 w-100 flex items-end bb">
                     <div class="pl3 pl5-m pl5-l f4 f2-l f2-m title" style="margin-bottom: -0.20em;">HOW TO STAY</div>
                     <img class="humantexttitle pl1 pl2-m pl2-l m2-s h2 h3-m h3-l" src="./img/HUMANTEXT.png"></img>
                     <div class="links tr flex flex-column justify-center h-100 w-15 pr3">
-                            <span class="db dn-m dn-l mb2" style="flex-grow: 1"></span>
                             <a href="./podcast.html" class="mv1 lh-title">PODCAST</a>
                             <a href="./programs.html" class="mv1 1lh-title">PROGRAMS</a>
                             <a href="./index.html" class="mv1 lh-title active">ABOUT</a>
