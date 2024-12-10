@@ -39,7 +39,7 @@ a.active {
 .hero {
     background-image: url(../img/BGTOP.png);
     background-position: left top;
-    background-size:auto;
+    background-size: auto;
     background-attachment: fixed;
     background-repeat: no-repeat;
     height: 100vh;
@@ -218,6 +218,16 @@ a:visited {
         background-position: center center;
         background-size: 90cqw;
         background-repeat: no-repeat;
+    }
+
+    .hero {
+        background-image: url(../img/BGTOPMOBILE.png);
+        background-position: left top;
+        background-size: 100% auto;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        height: 100vh;
+        height: 100dvh;
     }
 }
 
