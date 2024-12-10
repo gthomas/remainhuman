@@ -19,7 +19,9 @@
     transform: translateX(100%);
     -moz-animation: scroll-left 2s linear infinite;
     -webkit-animation: scroll-left 2s linear infinite;
-    animation: scroll-left 20s linear infinite;
+    animation: scroll-left 30s linear infinite;
+    font-kerning: none;
+    letter-spacing: .2rem;
 }
 @-moz-keyframes scroll-left {
     0% {

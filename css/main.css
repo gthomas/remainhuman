@@ -17,7 +17,7 @@ html {
 }
 
 .subtitle {
-    font-family: AeonMono;
+    font-family: AeonMonoSemiBold;
 }
 
 a:hover {
@@ -32,19 +32,26 @@ a.active {
     height: 100vh;
 }
 
+.toppage {
+    height: 125vh;
+}
+
 .hero {
     background-image: url(../img/BGTOP.png);
     background-position: left top;
-    background-size: cover;
+    background-size:auto;
     background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 100vh;
     max-height: 100vh;
 }
 
 .about {
     background-image: url(../img/BGMIDDLE.png);
-    background-position: right top;
+    background-position: bottom right;
     background-size: cover;
     background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 .graham {
@@ -64,7 +71,7 @@ a.active {
 .heart {
     background-image: url(../img/HEART.png);
     background-position: center center;
-    background-size: contain;
+    background-size: 40cqw;
     background-repeat: no-repeat;
 }
 
@@ -147,7 +154,7 @@ body {
 
 .heroimagemobile {
     background-image: url(../img/hero.png);
-    background-position: left bottom;
+    background-position: bottom left;
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -168,6 +175,7 @@ body {
 
 .podcast {
     background-position-x: 50%;
+    display: none;
 }
 
 .spotify {
@@ -183,7 +191,7 @@ body {
 }
 
 .learnmore {
-    background-image: url("../img/LEARNMOREBUTTON.png");
+    background-image: url("../img/LEARNMOREBUTTON2.png");
     background-repeat: no-repeat;
     background-attachment: contain;
     background-size: contain;
@@ -202,7 +210,14 @@ a:visited {
     }
 
     .page {
-        height: 150vh;
+        height: 175vh;
+    }
+
+    .heart {
+        background-image: url(../img/HEART.png);
+        background-position: center center;
+        background-size: 90cqw;
+        background-repeat: no-repeat;
     }
 }
 
