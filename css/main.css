@@ -39,7 +39,7 @@ a.active {
 .hero {
     background-image: url(../img/BGTOP.png);
     background-position: left top;
-    background-size: auto;
+    background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
     height: 100vh;
@@ -75,8 +75,12 @@ a.active {
     background-repeat: no-repeat;
 }
 
+.heroblurb {
+    font-family: FKGroteskMono;
+}
+
 .picnic {
-    background-image: url(../img/PICNIC.png);
+    background-image: url(../img/COMPUTER.gif);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -131,6 +135,7 @@ body {
     background-image: url(../img/title.png);
     background-position: left bottom;
     background-size: contain;
+    background-attachment: fixed;
     background-repeat: no-repeat;
 }
 
@@ -148,14 +153,24 @@ body {
     text-decoration: none;
 }
 
+.yellow a {
+    color:#cbfe19 !important;
+    text-decoration: none;
+}
+
+.yellow a:hover {
+    background-color: black;
+}
+
 .heroimage {
     height: 100%;
+    overflow: hidden;
 }
 
 .heroimagemobile {
     background-image: url(../img/hero.png);
     background-position: bottom left;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
 }
 
