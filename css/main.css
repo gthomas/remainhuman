@@ -55,7 +55,7 @@ a.active {
 }
 
 .graham {
-    background-image: url(../img/GRAHAM.png);
+    background-image: url(../img/GRAHAM.jpeg);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -77,6 +77,7 @@ a.active {
 
 .heroblurb {
     font-family: FKGroteskMono;
+    letter-spacing: 2px;
 }
 
 .picnic {
