@@ -29,24 +29,12 @@
             }
         }
     </style>
-    <script>
-        window.onload = function () {
-            var height = window.innerHeight;
-            console.log(window.innerHeight);
-            document.getElementsByClassName("hero")[0].style.height = window.innerHeight + "px";
-        }
-    </script>
 </head>
 
 <body>
     <div class="pagecontainer flex flex-column" style="overflow-x: hidden;">
         <!-- TOP PAGE -->
         <div class="flex flex-column page hero">
-            <div class="dn db-m db-l absolute bottom-0 h-100" style="left: 50%; pointer-events: none;">
-                <img class="heroimage" src="./img/hero.png" />
-            </div>
-            <div class="heroimagemobile dn-m dn-l absolute bottom-0 h-75 w-60" style="left: 40%; pointer-events: none;">
-            </div>
             <div>
                 <div class="h4 w-100 flex items-end bb">
                     <div class="pl3 pl5-m pl5-l f4 f2-l f2-m title" style="margin-bottom: -0.20em;">HOW TO STAY</div>
@@ -58,18 +46,21 @@
                     </div>
                 </div>
             </div>
-            <div class="flex flex-column  maincontent w-100 h4">
+            <div class="flex flex-column maincontent w-100">
                 <div class="heroblurb pt5 pt5-m pt5-l f5 f4-m f4-l pl3 pl5-m pl5-l pr3 pr0-m pr0-l w-60 w-25-m w-25-l">
                     Human creativity
                     <span class="white">has never been more important especially in the face of technology.</span>
                 </div>
-                <div style="flex-grow: 1;"></div>
-                <div class="flex items-center flex-row pl3 pl5-m pl5-l h4 w-60 w-20-m w-20-l" style="min-width: 208px;">
+                <div class="flex items-center flex-row pl3 pl5-m pl5-l w-60 w-20-m w-20-l hero-social">
                     <a href="https://open.spotify.com/show/5P6qabdEL76jPmky8eCIWc?si=ed8e0c92cf524fb2"
                         class="h2 w2 social spotify mr3"></a>
                     <a href="https://worldsveryfirst.com" class="h2 w2 social podcast mr3"></a>
                     <a href="https://www.instagram.com/how_to_stay_human/" class="h2 w2 social insta mr3"></a>
                 </div>
+            </div>
+            <div class="heroimagewrap">
+                <img class="heroimage heroimage--desktop dn db-m db-l" src="./img/hero.png" alt="Illustration of the How to Stay Human hero" />
+                <img class="heroimage heroimage--mobile db dn-m dn-l" src="./img/hero.png" alt="Illustration of the How to Stay Human hero" />
             </div>
             <div class="footer w-100">
                 <div class="bottom-0 bt bb h3 w-100">
@@ -90,16 +81,16 @@
         <!-- 2ND PAGE - ABOUT -->
         <div class="flex flex-column bb">
             <div class="flex flex-column flex-row-m flex-row-l items-around" style="flex-grow: 1;">
-                <div class="flex h-50 w-100 w-40-m w-40-l h-100-m h-100-l">
-                    <div class="flex pt5 flex-column w-90 w-100-m w-100-l">
-                        <span class="w-100 pl3 pl5-m pl5-l f6 f5-m f5-l mb1 sectionheading">EPISODE ONE</span>
-                        <span class="w-100 pl3 pl5-m pl5-l f3 f2-m f2-l mb1 subtitle">DEXTON DEBOREE</span>
-                        <span class="w-100 pl3 pl5-m pl5-l f6 f5-m f5-l mb1 sectionheading">WHAT CREATIVITY FEELS
+                <div class="flex h-50 w-100 w-40-m w-40-l h-100-m h-100-l split-column">
+                    <div class="split-column__inner pl3 pl5-m pl5-l">
+                        <span class="w-100 f6 f5-m f5-l mb1 sectionheading">EPISODE ONE</span>
+                        <span class="w-100 f3 f2-m f2-l mb1 subtitle">DEXTON DEBOREE</span>
+                        <span class="w-100 f6 f5-m f5-l mb1 sectionheading">WHAT CREATIVITY FEELS
                             LIKE</span>
                     </div>
                 </div>
-                <div class="flex flex-column items-center h-50 w-100 w-60-m h-100-m w-60-l h-100-l">
-                    <div class="w-90 f6 f5-m f5-l sectionbody pv3 pv4-m pv4-l lh-copy">
+                <div class="flex flex-column items-center h-50 w-100 w-60-m h-100-m w-60-l h-100-l split-column">
+                    <div class="split-column__inner f6 f5-m f5-l sectionbody pv3 pv4-m pv4-l lh-copy">
                         Dexton is part visionary, strategist, content pioneer, diversely talented
                         Writer/Director/Producer and creative hybrid.
                         <br /><br />
@@ -112,8 +103,8 @@
                         award-winning Feature Film, “Unbanned: The Legend of AJ1”, the 6-Part Series Best Shape of My
                         Life, starring Will Smith, and many other award winning TV Series and Feature Films.
                     </div>
-                    <div class="w-90 pb3">
-                        <iframe class="w-100 w-75-m w-75-l" style="border-radius:12px"
+                    <div class="split-column__inner pt3">
+                        <iframe class="w-100" style="border-radius:12px"
                             src="https://open.spotify.com/embed/episode/6dgbov8HgsZcttxzepb4iQ?utm_source=generator"
                             height="152" frameBorder="0" allowfullscreen=""
                             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
@@ -126,25 +117,25 @@
         
         <div class="flex flex-column bb bg-yellow">
             <div class="flex flex-column flex-row-m flex-row-l items-around" style="flex-grow: 1;">
-                <div class="flex h-50 w-100 w-40-m w-40-l h-100-m h-100-l">
-                    <div class="flex pt5 flex-column w-90 w-100-m w-100-l">
-                        <span class="w-100 pl3 pl5-m pl5-l f6 f5-m f5-l mb1 sectionheading">EPISODE TWO</span>
-                        <span class="w-100 pl3 pl5-m pl5-l f3 f2-m f2-l mb1 subtitle">ARI KUSHNIR</span>
-                        <span class="w-100 pl3 pl5-m pl5-l f6 f5-m f5-l mb1 sectionheading">HOW CREATIVITY CAN IMAGINE A BETTER WORLD</span>
+                <div class="flex h-50 w-100 w-40-m w-40-l h-100-m h-100-l split-column">
+                    <div class="split-column__inner pl3 pl5-m pl5-l">
+                        <span class="w-100 f6 f5-m f5-l mb1 sectionheading">EPISODE TWO</span>
+                        <span class="w-100 f3 f2-m f2-l mb1 subtitle">ARI KUSHNIR</span>
+                        <span class="w-100 f6 f5-m f5-l mb1 sectionheading">HOW CREATIVITY CAN IMAGINE A BETTER WORLD</span>
                     </div>
                 </div>
-                <div class="flex flex-column items-center h-50 w-100 w-60-m h-100-m w-60-l h-100-l">
-                    <div class="w-90 f6 f5-m f5-l sectionbody pv3 pv4-m pv4-l lh-copy">
-                        Dr Graham Mead and Maria Devereux explore the power of AI to imagine a better world with Ari Kuschnir. 
-                        Ari is a visionary and creative catalyst who consistently pushes the boundaries of 
-                        contemporary storytelling. 
+                <div class="flex flex-column items-center h-50 w-100 w-60-m h-100-m w-60-l h-100-l split-column">
+                    <div class="split-column__inner f6 f5-m f5-l sectionbody pv3 pv4-m pv4-l lh-copy">
+                        Dr Graham Mead and Maria Devereux explore the power of AI to imagine a better world with Ari Kuschnir.
+                        Ari is a visionary and creative catalyst who consistently pushes the boundaries of
+                        contemporary storytelling.
                         <br /><br />
-                        He is the founder of award-winning production company M ss ng P eces. But Ari recently became an 
-                        online sensation, with billions of views of his mind-bending viral AI videos which spark joy 
+                        He is the founder of award-winning production company M ss ng P eces. But Ari recently became an
+                        online sensation, with billions of views of his mind-bending viral AI videos which spark joy
                         and wonder, planting seeds in the collective imagination that a different world is possible.
                     </div>
-                    <div class="w-90 pb3">
-                        <iframe class="w-100 w-75-m w-75-l" data-testid="embed-iframe" style="border-radius:12px"
+                    <div class="split-column__inner pt3">
+                        <iframe class="w-100" data-testid="embed-iframe" style="border-radius:12px"
                             src="https://open.spotify.com/embed/episode/4uKBfuSrxFqimKvB2a4WPk?utm_source=generator&theme=0" width="100%"
                             height="152" frameBorder="0" allowfullscreen=""
                             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
@@ -156,23 +147,23 @@
 
         <div class="flex flex-column bb">
             <div class="flex flex-column flex-row-m flex-row-l items-around" style="flex-grow: 1;">
-                <div class="flex h-50 w-100 w-40-m w-40-l h-100-m h-100-l">
-                    <div class="flex pt5 flex-column w-90 w-100-m w-100-l">
-                        <span class="w-100 pl3 pl5-m pl5-l f6 f5-m f5-l mb1 sectionheading">EPISODE THREE</span>
-                        <span class="w-100 pl3 pl5-m pl5-l f3 f2-m f2-l mb1 subtitle">TAMI NEILSON</span>
-                        <span class="w-100 pl3 pl5-m pl5-l f6 f5-m f5-l mb1 sectionheading">TO BE COMPELLED TO CREATE IS TO BE HUMAN</span>
+                <div class="flex h-50 w-100 w-40-m w-40-l h-100-m h-100-l split-column">
+                    <div class="split-column__inner pl3 pl5-m pl5-l">
+                        <span class="w-100 f6 f5-m f5-l mb1 sectionheading">EPISODE THREE</span>
+                        <span class="w-100 f3 f2-m f2-l mb1 subtitle">TAMI NEILSON</span>
+                        <span class="w-100 f6 f5-m f5-l mb1 sectionheading">TO BE COMPELLED TO CREATE IS TO BE HUMAN</span>
                     </div>
                 </div>
-                <div class="flex flex-column items-center h-50 w-100 w-60-m h-100-m w-60-l h-100-l">
-                    <div class="w-90 f6 f5-m f5-l sectionbody pv3 pv4-m pv4-l lh-copy">
-                        Dr Graham Mead and Maria Devereux explore why humans are compelled to create with Tami Neilson. As an 
-                        award-winning country and soul musician, Tami shares the mystical and sometimes vulnerable 
-                        creative process of making music and performing in front of a crowd. Having just finished 
-                        touring with Willie Nelson, Bob Dylan and The Avett Brothers, Tami's latest album 'Neon Cowgirl' 
-                        has already made it to number ten in the US charts. 
+                <div class="flex flex-column items-center h-50 w-100 w-60-m h-100-m w-60-l h-100-l split-column">
+                    <div class="split-column__inner f6 f5-m f5-l sectionbody pv3 pv4-m pv4-l lh-copy">
+                        Dr Graham Mead and Maria Devereux explore why humans are compelled to create with Tami Neilson. As an
+                        award-winning country and soul musician, Tami shares the mystical and sometimes vulnerable
+                        creative process of making music and performing in front of a crowd. Having just finished
+                        touring with Willie Nelson, Bob Dylan and The Avett Brothers, Tami's latest album 'Neon Cowgirl'
+                        has already made it to number ten in the US charts.
                     </div>
-                    <div class="w-90 pb3">
-                        <iframe class="w-100 w-75-m w-75-l" data-testid="embed-iframe" style="border-radius:12px"
+                    <div class="split-column__inner pt3">
+                        <iframe class="w-100" data-testid="embed-iframe" style="border-radius:12px"
                             src="https://open.spotify.com/embed/episode/0QBSYQG3ie7aZelw502Lv4?utm_source=generator&theme=0" width="100%"
                             height="152" frameBorder="0" allowfullscreen=""
                             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
@@ -183,22 +174,22 @@
 
         <div class="flex flex-column bb bg-yellow">
             <div class="flex flex-column flex-row-m flex-row-l items-around" style="flex-grow: 1;">
-                <div class="flex h-50 w-100 w-40-m w-40-l h-100-m h-100-l">
-                    <div class="flex pt5 flex-column w-90 w-100-m w-100-l">
-                        <span class="w-100 pl3 pl5-m pl5-l f6 f5-m f5-l mb1 sectionheading">EPISODE FOUR</span>
-                        <span class="w-100 pl3 pl5-m pl5-l f3 f2-m f2-l mb1 subtitle">PAUL RAPHAËL</span>
-                        <span class="w-100 pl3 pl5-m pl5-l f6 f5-m f5-l mb1 sectionheading">HOW REAL SHOULD VIRTUAL REALITY BE?</span>
+                <div class="flex h-50 w-100 w-40-m w-40-l h-100-m h-100-l split-column">
+                    <div class="split-column__inner pl3 pl5-m pl5-l">
+                        <span class="w-100 f6 f5-m f5-l mb1 sectionheading">EPISODE FOUR</span>
+                        <span class="w-100 f3 f2-m f2-l mb1 subtitle">PAUL RAPHAËL</span>
+                        <span class="w-100 f6 f5-m f5-l mb1 sectionheading">HOW REAL SHOULD VIRTUAL REALITY BE?</span>
                     </div>
                 </div>
-                <div class="flex flex-column items-center h-50 w-100 w-60-m h-100-m w-60-l h-100-l">
-                    <div class="w-90 f6 f5-m f5-l sectionbody pv3 pv4-m pv4-l lh-copy">
-                        Dr Graham Mead and Maria Devereux explore how real virtual reality should be with Paul Raphaël. Paul is an 
-                        Emmy award-winning and Oscar-nominated filmmaker, visual artist and director. He is widely recognized 
-                        as an immersive entertainment revolutionary. Alongside his co-founder Felix Lajeunesse, he has revolutionized 
-                        VR, AR, and mixed reality entertainment since the inception of Felix & Paul Studios in 2013. 
+                <div class="flex flex-column items-center h-50 w-100 w-60-m h-100-m w-60-l h-100-l split-column">
+                    <div class="split-column__inner f6 f5-m f5-l sectionbody pv3 pv4-m pv4-l lh-copy">
+                        Dr Graham Mead and Maria Devereux explore how real virtual reality should be with Paul Raphaël. Paul is an
+                        Emmy award-winning and Oscar-nominated filmmaker, visual artist and director. He is widely recognized
+                        as an immersive entertainment revolutionary. Alongside his co-founder Felix Lajeunesse, he has revolutionized
+                        VR, AR, and mixed reality entertainment since the inception of Felix & Paul Studios in 2013.
                     </div>
-                    <div class="w-90 pb3">
-                        <iframe class="w-100 w-75-m w-75-l" data-testid="embed-iframe" style="border-radius:12px"
+                    <div class="split-column__inner pt3">
+                        <iframe class="w-100" data-testid="embed-iframe" style="border-radius:12px"
                             src="https://open.spotify.com/embed/episode/7wRHD4j2hT5HUvATLsnz87?utm_source=generator&theme=0" width="100%"
                             height="152" frameBorder="0" allowfullscreen=""
                             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
@@ -209,22 +200,22 @@
 
         <div class="flex flex-column bb">
             <div class="flex flex-column flex-row-m flex-row-l items-around" style="flex-grow: 1;">
-                <div class="flex h-50 w-100 w-40-m w-40-l h-100-m h-100-l">
-                    <div class="flex pt5 flex-column w-90 w-100-m w-100-l">
-                        <span class="w-100 pl3 pl5-m pl5-l f6 f5-m f5-l mb1 sectionheading">EPISODE FIVE</span>
-                        <span class="w-100 pl3 pl5-m pl5-l f3 f2-m f2-l mb1 subtitle">SCOTT LEESE</span>
-                        <span class="w-100 pl3 pl5-m pl5-l f6 f5-m f5-l mb1 sectionheading">THE AI PROMPT IS A HUMAN CHOICE</span>
+                <div class="flex h-50 w-100 w-40-m w-40-l h-100-m h-100-l split-column">
+                    <div class="split-column__inner pl3 pl5-m pl5-l">
+                        <span class="w-100 f6 f5-m f5-l mb1 sectionheading">EPISODE FIVE</span>
+                        <span class="w-100 f3 f2-m f2-l mb1 subtitle">SCOTT LEESE</span>
+                        <span class="w-100 f6 f5-m f5-l mb1 sectionheading">THE AI PROMPT IS A HUMAN CHOICE</span>
                     </div>
                 </div>
-                <div class="flex flex-column items-center h-50 w-100 w-60-m h-100-m w-60-l h-100-l">
-                    <div class="w-90 f6 f5-m f5-l sectionbody pv3 pv4-m pv4-l lh-copy">
+                <div class="flex flex-column items-center h-50 w-100 w-60-m h-100-m w-60-l h-100-l split-column">
+                    <div class="split-column__inner f6 f5-m f5-l sectionbody pv3 pv4-m pv4-l lh-copy">
                         Dr Graham Mead, Maria Devereux and Scott Leese explore how the power of human choice influences our interaction with AI.
                         Scott is a six times Sales Leader, five times Founder and three times Amazon best-selling Author. With numerous industry
                         awards for excellence in sales leadership, he is a top start up sales leader in the US and a respected strategic advisor
                         to companies all around the world.
                     </div>
-                    <div class="w-90 pb3">
-                        <iframe class="w-100 w-75-m w-75-l" data-testid="embed-iframe" style="border-radius:12px"
+                    <div class="split-column__inner pt3">
+                        <iframe class="w-100" data-testid="embed-iframe" style="border-radius:12px"
                             src="https://open.spotify.com/embed/episode/4yEopczRbGDIOpO8F36F74?utm_source=generator&theme=0" width="100%"
                             height="152" frameBorder="0" allowfullscreen=""
                             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
@@ -236,22 +227,22 @@
     
         <div class="flex flex-column bb bg-yellow">
             <div class="flex flex-column flex-row-m flex-row-l items-around" style="flex-grow: 1;">
-                <div class="flex h-50 w-100 w-40-m w-40-l h-100-m h-100-l">
-                    <div class="flex pt5 flex-column w-90 w-100-m w-100-l">
-                        <span class="w-100 pl3 pl5-m pl5-l f6 f5-m f5-l mb1 sectionheading">EPISODE SIX</span>
-                        <span class="w-100 pl3 pl5-m pl5-l f3 f2-m f2-l mb1 subtitle">MATTHEW HARTMAN</span>
-                        <span class="w-100 pl3 pl5-m pl5-l f6 f5-m f5-l mb1 sectionheading">CAN TECHNOLOGY BE HUMAN?</span>
+                <div class="flex h-50 w-100 w-40-m w-40-l h-100-m h-100-l split-column">
+                    <div class="split-column__inner pl3 pl5-m pl5-l">
+                        <span class="w-100 f6 f5-m f5-l mb1 sectionheading">EPISODE SIX</span>
+                        <span class="w-100 f3 f2-m f2-l mb1 subtitle">MATTHEW HARTMAN</span>
+                        <span class="w-100 f6 f5-m f5-l mb1 sectionheading">CAN TECHNOLOGY BE HUMAN?</span>
                     </div>
                 </div>
-                <div class="flex flex-column items-center h-50 w-100 w-60-m h-100-m w-60-l h-100-l">
-                    <div class="w-90 f6 f5-m f5-l sectionbody pv3 pv4-m pv4-l lh-copy">
+                <div class="flex flex-column items-center h-50 w-100 w-60-m h-100-m w-60-l h-100-l split-column">
+                    <div class="split-column__inner f6 f5-m f5-l sectionbody pv3 pv4-m pv4-l lh-copy">
                         Dr Graham Mead and Maria Devereux explore whether technology can be human with Matt Hartman. Matt is Managing Partner of
                         Factorial Capital where he led the first investment rounds in multi billion dollar company, Huggingface. And in Anchor,
                         the popular podcast app acquired by Spotify. With a proven track record, Matt founded this new model in venture capital
                         to invest in the next generation of AI startups.
                     </div>
-                    <div class="w-90 pb3">
-                        <iframe class="w-100 w-75-m w-75-l" data-testid="embed-iframe" style="border-radius:12px"
+                    <div class="split-column__inner pt3">
+                        <iframe class="w-100" data-testid="embed-iframe" style="border-radius:12px"
                             src="https://open.spotify.com/embed/episode/2moz6XJG4Lz142oH1kPGjz?utm_source=generator&theme=0" width="100%"
                             height="152" frameBorder="0" allowfullscreen=""
                             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
@@ -262,22 +253,22 @@
 
         <div class="flex flex-column bb">
             <div class="flex flex-column flex-row-m flex-row-l items-around" style="flex-grow: 1;">
-                <div class="flex h-50 w-100 w-40-m w-40-l h-100-m h-100-l">
-                    <div class="flex pt5 flex-column w-90 w-100-m w-100-l">
-                        <span class="w-100 pl3 pl5-m pl5-l f6 f5-m f5-l mb1 sectionheading">EPISODE SEVEN</span>
-                        <span class="w-100 pl3 pl5-m pl5-l f3 f2-m f2-l mb1 subtitle">FRANZ RIEBENBAUER</span>
-                        <span class="w-100 pl3 pl5-m pl5-l f6 f5-m f5-l mb1 sectionheading">WHY CREATIVITY THRIVES IN UNCERTAINTY?</span>
+                <div class="flex h-50 w-100 w-40-m w-40-l h-100-m h-100-l split-column">
+                    <div class="split-column__inner pl3 pl5-m pl5-l">
+                        <span class="w-100 f6 f5-m f5-l mb1 sectionheading">EPISODE SEVEN</span>
+                        <span class="w-100 f3 f2-m f2-l mb1 subtitle">FRANZ RIEBENBAUER</span>
+                        <span class="w-100 f6 f5-m f5-l mb1 sectionheading">WHY CREATIVITY THRIVES IN UNCERTAINTY?</span>
                     </div>
                 </div>
-                <div class="flex flex-column items-center h-50 w-100 w-60-m h-100-m w-60-l h-100-l">
-                    <div class="w-90 f6 f5-m f5-l sectionbody pv3 pv4-m pv4-l lh-copy">
+                <div class="flex flex-column items-center h-50 w-100 w-60-m h-100-m w-60-l h-100-l split-column">
+                    <div class="split-column__inner f6 f5-m f5-l sectionbody pv3 pv4-m pv4-l lh-copy">
                         Dr Graham Mead and Maria Devereux explore why creativity thrives in uncertainty with Franz Riebenbauer. Franz is an
                         award-winning designer and the Founder of multidisciplinary design studio, Studio Riebenbauer. With a vision to build a
                         studio that sees brands as living ecosystems, for over two decades Franz has created revolutionary immersive brand
                         experiences which use design as a tool to shape memory, emotion, and deeper human connection.
                     </div>
-                    <div class="w-90 pb3">
-                        <iframe class="w-100 w-75-m w-75-l" data-testid="embed-iframe" style="border-radius:12px"
+                    <div class="split-column__inner pt3">
+                        <iframe class="w-100" data-testid="embed-iframe" style="border-radius:12px"
                             src="https://open.spotify.com/embed/episode/4GYG1FuEvZdMahUwizfd7t?utm_source=generator&theme=0" width="100%"
                             height="152" frameBorder="0" allowfullscreen=""
                             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
@@ -288,22 +279,22 @@
 
         <div class="flex flex-column bb bg-yellow">
             <div class="flex flex-column flex-row-m flex-row-l items-around" style="flex-grow: 1;">
-                <div class="flex h-50 w-100 w-40-m w-40-l h-100-m h-100-l">
-                    <div class="flex pt5 flex-column w-90 w-100-m w-100-l">
-                        <span class="w-100 pl3 pl5-m pl5-l f6 f5-m f5-l mb1 sectionheading">EPISODE EIGHT</span>
-                        <span class="w-100 pl3 pl5-m pl5-l f3 f2-m f2-l mb1 subtitle">RIMMA BOSHERNITSAN</span>
-                        <span class="w-100 pl3 pl5-m pl5-l f6 f5-m f5-l mb1 sectionheading">THE TRUE POWER OF CREATIVE INTUITION</span>
+                <div class="flex h-50 w-100 w-40-m w-40-l h-100-m h-100-l split-column">
+                    <div class="split-column__inner">
+                        <span class="w-100 f6 f5-m f5-l mb1 sectionheading">EPISODE EIGHT</span>
+                        <span class="w-100 f3 f2-m f2-l mb1 subtitle">RIMMA BOSHERNITSAN</span>
+                        <span class="w-100 f6 f5-m f5-l mb1 sectionheading">THE TRUE POWER OF CREATIVE INTUITION</span>
                     </div>
                 </div>
-                <div class="flex flex-column items-center h-50 w-100 w-60-m h-100-m w-60-l h-100-l">
-                    <div class="w-90 f6 f5-m f5-l sectionbody pv3 pv4-m pv4-l lh-copy">
+                <div class="flex flex-column items-center h-50 w-100 w-60-m h-100-m w-60-l h-100-l split-column">
+                    <div class="split-column__inner">
                         Dr Graham Mead and Maria Devereux explore the true power of creative intuition with Rimma Boshernitsan. Rimma is the
                         founder and CEO of DIALOGUE, an interdisciplinary strategic advisory which sits at the intersection of technology, human
                         connection and strategy. Over her 20-year career, she has served as a strategic advisor and thought partner to CEOs of
                         emerging businesses and Fortune 500 organizations including Google, Apple and Levi's.
                     </div>
-                    <div class="w-90 pb3">
-                        <iframe class="w-100 w-75-m w-75-l" data-testid="embed-iframe" style="border-radius:12px"
+                    <div class="split-column__inner pt3">
+                        <iframe class="w-100" data-testid="embed-iframe" style="border-radius:12px"
                             src="https://open.spotify.com/embed/episode/2jtAtdgW7W76NizVqYu8n1?utm_source=generator&theme=0" width="100%"
                             height="152" frameBorder="0" allowfullscreen=""
                             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
