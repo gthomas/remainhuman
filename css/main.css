@@ -54,6 +54,17 @@ a.active {
     background-repeat: no-repeat;
 }
 
+.background-panel {
+    min-height: 50vh;
+    align-self: stretch;
+}
+
+@supports (height: 100dvh) {
+    .background-panel {
+        min-height: 50dvh;
+    }
+}
+
 .graham {
     background-image: url(../img/GRAHAM.jpeg);
     background-position: center center;
