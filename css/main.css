@@ -3,6 +3,10 @@ html {
     font-family: AeonMono;
 }
 
+:root {
+    --hero-marquee-height: 4rem;
+}
+
 .pagecontainer {
     overflow-x: hidden;
 }
@@ -45,6 +49,7 @@ a.active {
     min-height: 100vh;
     min-height: 100dvh;
     position: relative;
+    overflow: visible;
 }
 
 .about {
@@ -176,13 +181,15 @@ body {
 }
 
 .heroimagewrap {
-    margin-top: auto;
     display: flex;
     justify-content: center;
     align-items: flex-end;
     pointer-events: none;
     padding: 1.5rem 1rem 0;
     gap: 1rem;
+    position: relative;
+    z-index: 2;
+    transform: translateY(var(--hero-marquee-height));
 }
 
 .heroimage {
@@ -240,6 +247,10 @@ body {
         display: none;
     }
 
+    .hero .hero-social {
+        transform: translateY(calc(var(--hero-marquee-height) * 10 + 3rem));
+    }
+
     .split-column {
         padding: 3rem 2.5rem;
     }
@@ -287,6 +298,26 @@ body {
 .maincontent {
     flex-grow: 1;
     z-index: 999;
+}
+
+.hero .maincontent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: clamp(22rem, 55vh, 38rem);
+}
+
+.hero-social {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    min-width: 13rem;
+    transform: translateY(calc(var(--hero-marquee-height) * 4 + 2rem));
+}
+
+.hero-social a {
+    display: block;
 }
 
 .footer {
