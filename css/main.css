@@ -213,13 +213,21 @@ body {
 .split-column {
     padding: 2rem 1.5rem;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     height: auto;
+    align-self: stretch;
 }
 
 .split-column__inner {
     width: 100%;
     max-width: 32rem;
+}
+
+.program-divider {
+    display: block;
+    width: 100%;
 }
 
 .split-column__inner > .sectionheading,
