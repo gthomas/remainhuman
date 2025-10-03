@@ -30,11 +30,15 @@
         }
     </style>
     <script>
-        window.onload = function () {
-            var height = window.innerHeight;
-            console.log(window.innerHeight);
-            document.getElementsByClassName("hero")[0].style.height = window.innerHeight + "px";
+        function setHeroHeight() {
+            var hero = document.querySelector('.hero');
+            if (hero) {
+                hero.style.height = window.innerHeight + 'px';
+            }
         }
+
+        window.addEventListener('load', setHeroHeight);
+        window.addEventListener('resize', setHeroHeight);
     </script>
 </head>
 
