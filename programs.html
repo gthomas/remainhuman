@@ -29,28 +29,12 @@
             }
         }
     </style>
-    <script>
-        function setHeroHeight() {
-            var hero = document.querySelector('.hero');
-            if (hero) {
-                hero.style.height = window.innerHeight + 'px';
-            }
-        }
-
-        window.addEventListener('load', setHeroHeight);
-        window.addEventListener('resize', setHeroHeight);
-    </script>
 </head>
 
 <body>
     <div class="pagecontainer flex flex-column" style="overflow-x: hidden;">
         <!-- TOP PAGE -->
         <div class="flex flex-column page hero">
-            <div class="dn db-m db-l heroimagewrap">
-                <img class="heroimage" src="./img/hero.png" />
-            </div>
-            <div class="heroimagemobile dn-m dn-l absolute bottom-0 h-75 w-60" style="left: 40%; pointer-events: none;">
-            </div>
             <div>
                 <div class="h4 w-100 flex items-end bb">
                     <div class="pl3 pl5-m pl5-l f4 f2-l f2-m title" style="margin-bottom: -0.20em;">HOW TO STAY</div>
@@ -74,6 +58,10 @@
                     <a href="https://worldsveryfirst.com" class="h2 w2 social podcast mr3"></a>
                     <a href="https://www.instagram.com/how_to_stay_human/" class="h2 w2 social insta mr3"></a>
                 </div>
+            </div>
+            <div class="heroimagewrap">
+                <img class="heroimage heroimage--desktop dn db-m db-l" src="./img/hero.png" alt="Illustration of the How to Stay Human hero" />
+                <img class="heroimage heroimage--mobile db dn-m dn-l" src="./img/hero.png" alt="Illustration of the How to Stay Human hero" />
             </div>
             <div class="footer w-100">
                 <div class="bottom-0 bt bb h3 w-100">
@@ -104,9 +92,8 @@
                 </div>
             </div>
             <div class="flex flex-column flex-row-m flex-row-l items-center" style="flex-grow: 1;">
-                <div class="flex items-center h-50 w-100 w-50-m w-50-l h-100-m h-100-l">
-                    <div style="flex-grow: 1;"></div>
-                    <div class="flex flex-column pl3 pl5-m pl5-l pr3 pr5-m pr5-l w-100 w-100-m w-100-l">
+                <div class="flex items-center h-50 w-100 w-50-m w-50-l h-100-m h-100-l split-column">
+                    <div class="flex flex-column split-column__inner pl3 pl5-m pl5-l pr3 pr5-m pr5-l">
                         <span class="f6 f5-m f5-l mb1 sectionheading">HOW TO STAY HUMAN</span>
                         <span class="f3 f2-m f2-l mb1 subtitle">ABOUT OUR PROGRAM</span>
                         <span class="mt3 f6 f5-m f5-l sectionbody lh-copy lh-copy-m lh-copy-l">
@@ -134,7 +121,6 @@
                             </span>
                         </span>
                     </div>
-                    <div style="flex-grow: 1;"></div>
                 </div>
                 <div class="w-100 w-50-m w-50-l bb bl-m bl-l picnic background-panel"></div>
             </div>
@@ -142,23 +128,15 @@
         <!-- 3RD PAGE - 30 MINUTE PROGRAMS -->
         <div class="flex flex-column page bb">
             <div class="flex flex-column flex-row-m flex-row-l items-end" style="flex-grow: 1;">
-                <div class="flex items-center h-50 w-100 w-50-m h-100-m w-50-l h-100-l bb br-m br-l bg-yellow"
+                <div class="flex items-center h-50 w-100 w-50-m h-100-m w-50-l h-100-l bb br-m br-l bg-yellow split-column"
                     style="flex-grow: 1;">
-                    <div style="flex-grow: 1;"></div>
-                    <div class="flex flex-column w-100 w-100-m w-100-l bio">
-                        <div class="flex flex-row w-100">
-                            <div style="flex-grow: 1;"></div>
-                            <div class="flex flex-column">
-                                <span class="f6 f5-m f5-l mb1 sectionheading">30 MINUTE</span>
-                                <span class="f3 f2-m f2-l mb1 subtitle mb2">ONLINE MODULES</span>
-                            </div>
-                            <div style="flex-grow: 1;"></div>
-                        </div>
+                    <div class="flex flex-column split-column__inner bio tc">
+                        <span class="f6 f5-m f5-l mb1 sectionheading">30 MINUTE</span>
+                        <span class="f3 f2-m f2-l mb1 subtitle mb2">ONLINE MODULES</span>
                     </div>
-                    <div style="flex-grow: 1;"></div>
                 </div>
-                <div class="flex items-center h-50 w-100 w-50-m w-50-l h-100-m h-100-l pv4">
-                    <div class="flex flex-column h-100 w-100 w-100-m w-100-l bio">
+                <div class="flex items-center h-50 w-100 w-50-m w-50-l h-100-m h-100-l pv4 split-column">
+                    <div class="flex flex-column h-100 w-100 w-100-m w-100-l bio split-column__inner">
                         <div style="flex-grow: 1;"></div>
                         <span class="f6 f5-m f5-l mb1 w-80 ph3 ph5-m ph5-l sectionheading yellow">MODULE ONE</span>
                         <span class="f3 f2-m f2-l mb1 w-80 ph3 ph5-m ph5-l subtitle mb2 yellow"> SUPERCHARGING YOUR
@@ -192,8 +170,8 @@
         <!-- 4TH PAGE - MARIA -->
         <div class="flex flex-column page nosign" style="overflow-x: hidden;">
             <div class="flex flex-column flex-row-m flex-row-l items-end" style="flex-grow: 1;">
-                <div class="flex items-center h-50 w-100 w-50-m w-50-l h-100-m h-100-l bb bn-m bn-l pv4">
-                    <div class="flex flex-column h-100 w-100 w-100-m w-100-l bio">
+                <div class="flex items-center h-50 w-100 w-50-m w-50-l h-100-m h-100-l bb bn-m bn-l pv4 split-column">
+                    <div class="flex flex-column h-100 w-100 w-100-m w-100-l bio split-column__inner">
                         <div style="flex-grow: 1;"></div>
                         <span class="f6 f5-m f5-l mb1 w-80 ph3 ph5-m ph5-l sectionheading yellow">MODULE THREE</span>
                         <span class="f3 f2-m f2-l mb1 w-80 ph3 ph5-m ph5-l subtitle mb2 yellow">HUMAN
@@ -219,20 +197,12 @@
                         <div style="flex-grow: 1;"></div>
                     </div>
                 </div>
-                <div class="dn flex-m flex-l items-center h-50 w-100 w-50-m h-100-m w-50-l h-100-l bb br-m br-l bg-yellow"
+                <div class="dn flex-m flex-l items-center h-50 w-100 w-50-m h-100-m w-50-l h-100-l bb br-m br-l bg-yellow split-column"
                     style="flex-grow: 1;">
-                    <div style="flex-grow: 1;"></div>
-                    <div class="flex flex-column w-100 w-100-m w-100-l bio">
-                        <div class="flex flex-row w-100">
-                            <div style="flex-grow: 1;"></div>
-                            <div class="flex flex-column">
-                                <span class="f6 f5-m f5-l mb1 sectionheading">30 MINUTE</span>
-                                <span class="f3 f2-m f2-l mb1 subtitle mb2">ONLINE MODULES</span>
-                            </div>
-                            <div style="flex-grow: 1;"></div>
-                        </div>
+                    <div class="flex flex-column split-column__inner bio tc">
+                        <span class="f6 f5-m f5-l mb1 sectionheading">30 MINUTE</span>
+                        <span class="f3 f2-m f2-l mb1 subtitle mb2">ONLINE MODULES</span>
                     </div>
-                    <div style="flex-grow: 1;"></div>
                 </div>
             </div>
         </div>

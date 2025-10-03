@@ -42,8 +42,8 @@ a.active {
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    height: 100vh;
-    height: 100dvh;
+    min-height: 100vh;
+    min-height: 100dvh;
     position: relative;
 }
 
@@ -176,33 +176,96 @@ body {
 }
 
 .heroimagewrap {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
+    margin-top: auto;
     display: flex;
     justify-content: center;
     align-items: flex-end;
     pointer-events: none;
-    overflow: hidden;
+    padding: 1.5rem 1rem 0;
+    gap: 1rem;
 }
 
 .heroimage {
-    max-height: 100%;
-    max-width: 100%;
-    width: auto;
+    max-width: min(90%, 34rem);
     height: auto;
     object-fit: contain;
     object-position: bottom center;
     display: block;
 }
 
-.heroimagemobile {
-    background-image: url(../img/hero.png);
-    background-position: bottom left;
-    background-size: contain;
-    background-repeat: no-repeat;
+.heroimage--mobile {
+    max-width: 75%;
+}
+
+.heroimage--desktop {
+    max-width: min(80%, 42rem);
+}
+
+.split-column {
+    padding: 2rem 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.split-column__inner {
+    width: 100%;
+    max-width: 32rem;
+}
+
+.split-column__inner.bio {
+    max-width: 34rem;
+}
+
+@media screen and (min-width: 30em) {
+    .heroimagewrap {
+        padding: 2.5rem 2rem 0;
+    }
+
+    .heroimage {
+        max-width: min(80%, 36rem);
+    }
+
+    .heroimage--desktop {
+        max-width: min(70%, 46rem);
+    }
+
+    .split-column {
+        padding: 3rem 2.5rem;
+    }
+
+    .split-column__inner {
+        max-width: 34rem;
+    }
+
+    .split-column__inner.bio {
+        max-width: 36rem;
+    }
+}
+
+@media screen and (min-width: 60em) {
+    .heroimagewrap {
+        padding: 3rem 3rem 0;
+    }
+
+    .heroimage {
+        max-width: min(70%, 40rem);
+    }
+
+    .heroimage--desktop {
+        max-width: min(60%, 48rem);
+    }
+
+    .split-column {
+        padding: 4rem 3.5rem;
+    }
+
+    .split-column__inner {
+        max-width: 38rem;
+    }
+
+    .split-column__inner.bio {
+        max-width: 40rem;
+    }
 }
 
 .maincontent {
