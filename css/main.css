@@ -378,13 +378,14 @@ a:visited {
 
     .hero {
         background-image: url(../img/BGTOPMOBILE.png);
-        background-position: left top;
-        background-size: 100% auto;
+        background-position: center top;
+        background-size: cover;
         background-attachment: fixed;
         background-repeat: no-repeat;
-        height: 100vh;
-        height: 100dvh;
+        min-height: 100vh;
+        min-height: 100dvh;
     }
+
 }
 
 @media screen and (min-width: 30em) and (max-width: 60em) {
