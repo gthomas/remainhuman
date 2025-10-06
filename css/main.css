@@ -280,6 +280,12 @@ body {
 }
 
 @media screen and (min-width: 30em) {
+    .split-row {
+        flex-direction: row;
+        align-items: stretch;
+        flex-wrap: nowrap;
+    }
+
     .heroimagewrap {
         padding: 2.5rem 2rem 0;
     }
