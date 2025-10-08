@@ -17,22 +17,11 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="manifest" href="site.webmanifest" />
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <script>
-            window.onload = function () {
-                var height = window.innerHeight;
-                console.log(window.innerHeight);
-                document.getElementsByClassName("hero")[0].style.height = window.innerHeight+"px";
-            }
-    </script>
 </head>
   <body>
     <div class="pagecontainer flex flex-column" style="overflow-x: hidden;">
         <!-- TOP PAGE -->
-        <div class="flex flex-column hero" style="overflow: hidden;">
-            <div class="dn db-m db-l absolute bottom-0 h-100" style="left: 50%; pointer-events: none; overflow: hidden;">
-                <img class="heroimage" src="./img/hero.png" />
-            </div>
-            <div class="heroimagemobile db dn-m dn-l absolute bottom-0 w-60 h-75" style="left: 40%; pointer-events: none;"></div>
+        <div class="flex flex-column hero">
             <div>
                 <div class="h4 w-100 flex items-end bb">
                     <div class="pl3 pl5-m pl5-l f4 f2-l f2-m title" style="margin-bottom: -0.20em;">HOW TO STAY</div>
@@ -44,17 +33,20 @@
                     </div>
                 </div>
             </div>
-            <div class="flex flex-column  maincontent w-100 h4">
+            <div class="flex flex-column maincontent w-100">
                     <div class="heroblurb pt5 pt5-m pt5-l f5 f4-m f4-l pl3 pl5-m pl5-l pr3 pr0-m pr0-l w-60 w-25-m w-25-l">
-                        Human creativity 
+                        Human creativity
                         <span class="white">has never been more important especially in the face of technology.</span>
                     </div>
-                    <div style="flex-grow: 1;"></div>
-                    <div class="flex items-center flex-row pl3 pl5-m pl5-l h4 w-60 w-20-m w-20-l" style="min-width: 208px;">
+                    <div class="flex items-center flex-row pl3 pl5-m pl5-l w-60 w-20-m w-20-l hero-social">
                         <a href="https://open.spotify.com/show/5P6qabdEL76jPmky8eCIWc?si=ed8e0c92cf524fb2" class="h2 w2 social spotify mr3"></a>
                         <a href="https://worldsveryfirst.com" class="h2 w2 social podcast mr3"></a>
                         <a href="https://www.instagram.com/how_to_stay_human/" class="h2 w2 social insta mr3"></a>
                     </div>
+            </div>
+            <div class="heroimagewrap">
+                <img class="heroimage heroimage--desktop dn db-m db-l" src="./img/hero.png" alt="Illustration of the How to Stay Human hero" />
+                <img class="heroimage heroimage--mobile db dn-m dn-l" src="./img/hero.png" alt="Illustration of the How to Stay Human hero" />
             </div>
             <div class="footer w-100">
                 <div class="bottom-0 bt bb h3 w-100">
@@ -75,29 +67,27 @@
             <div class="flex row bb h3">
                 <div class="w-50 br"></div><div class="w-50"></div>
             </div>
-            <div class="flex flex-column flex-row-m flex-row-l items-end" style="flex-grow: 1;">
-                <div class="h-50 w-100 w-50-m h-100-m w-50-l h-100-l bb br-m br-l heart"></div>
-                <div class="flex items-center h-50 w-100 w-50-m w-50-l h-100-m h-100-l">
-                    <div style="flex-grow: 1;"></div>
-                    <div class="flex flex-column w-90 w-60-m w-60-l">
+            <div class="split-row flex flex-column flex-row-m flex-row-l" style="flex-grow: 1;">
+                <div class="w-100 w-50-m w-50-l bb br-m br-l heart background-panel"></div>
+                <div class="flex w-100 w-50-m w-50-l split-column">
+                    <div class="flex flex-column split-column__inner">
                         <span class="f6 f5-m f5-l mb1 sectionheading">ABOUT</span>
                         <span class="f3 f2-m f2-l mb1 subtitle">CREATIVITY</span>
-                        <span class="f3 f2-m f2-l mb1 subtitle">A 
+                        <span class="f3 f2-m f2-l mb1 subtitle">A
                             <img class="h2 h3-m h3-l" src="./img/HUMANTEXT.png" style="margin-bottom: -0.5rem"></img>
                             EXPERIENCE
                         </span>
                         <span class="mt2 f6 f5-m f5-l sectionbody lh-copy lh-copy-m lh-copy-l">
-                            As AI starts to play a more significant role in our lives and our creative futures, 
-                            How to Stay Human uncovers practical ways to stay more connected to our humanity and 
+                            As AI starts to play a more significant role in our lives and our creative futures,
+                            How to Stay Human uncovers practical ways to stay more connected to our humanity and
                             more creative because of it.
                             <br /> <br />
-                            Creativity; defined as the human ability to generate new and original ideas and perhaps 
-                            one of the most other-worldly aspects of the human experience. Magical, unstoppable and 
-                            often intangible, it's nothing short of extraordinary. Dr Graham Mead and Maria Devereux 
-                            explore practical ways for us to inspire, enhance and celebrate our creativity. 
+                            Creativity; defined as the human ability to generate new and original ideas and perhaps
+                            one of the most other-worldly aspects of the human experience. Magical, unstoppable and
+                            often intangible, it's nothing short of extraordinary. Dr Graham Mead and Maria Devereux
+                            explore practical ways for us to inspire, enhance and celebrate our creativity.
                         </span>
                     </div>
-                    <div style="flex-grow: 1;"></div>
                 </div>
             </div>
         </div>
@@ -106,11 +96,10 @@
             <div class="flex row bb h3">
                 <div class="w-50 br bg-yellow"></div><div class="w-50"></div>
             </div>
-            <div class="flex flex-column flex-row-m flex-row-l items-end" style="flex-grow: 1;">
-                <div class="h-50 w-100 w-50-m h-100-m w-50-l h-100-l bb br-m br-l graham" style="flex-grow: 1;"></div>
-                <div class="flex items-center h-50 w-100 w-50-m w-50-l h-100-m h-100-l">
-                    <div style="flex-grow: 1;"></div>
-                    <div class="flex flex-column w-90 w-60-m w-60-l bio">
+            <div class="split-row flex flex-column flex-row-m flex-row-l" style="flex-grow: 1;">
+                <div class="w-100 w-50-m w-50-l bb br-m br-l graham background-panel"></div>
+                <div class="flex w-100 w-50-m w-50-l split-column">
+                    <div class="flex flex-column split-column__inner bio">
                         <span class="f6 f5-m f5-l mb1 sectionheading">INTRODUCING</span>
                         <span class="f3 f2-m f2-l mb1 subtitle mb2">DR GRAHAM MEAD</span>
                         <span class="mt2 f6 f5-m f5-l sectionbody lh-copy lh-copy-m lh-copy-l">
@@ -129,7 +118,6 @@
                             <a href="https://www.grahammead.com/" target="_blank" class="learnmore"></a>
                         </span>
                     </div>
-                    <div style="flex-grow: 1;"></div>
                 </div>
             </div>
         </div>
@@ -138,11 +126,10 @@
             <div class="flex row bb h3">
                 <div class="w-50 br"></div><div class="w-50 bg-yellow"></div>
             </div>
-            <div class="flex flex-column flex-row-m flex-row-l items-end" style="flex-grow: 1;">
-                <div class="h-50 w-100 w-50-m h-100-m w-50-l h-100-l bb br-m br-l maria"></div>
-                <div class="flex items-center h-50 w-100 w-50-m w-50-l h-100-m h-100-l">
-                    <div style="flex-grow: 1;"></div>
-                    <div class="flex flex-column w-90 w-60-m w-60-l bio">
+            <div class="split-row flex flex-column flex-row-m flex-row-l" style="flex-grow: 1;">
+                <div class="w-100 w-50-m w-50-l bb br-m br-l maria background-panel"></div>
+                <div class="flex w-100 w-50-m w-50-l split-column">
+                    <div class="flex flex-column split-column__inner bio">
                         <span class="f6 f5-m f5-l mb1 sectionheading">INTRODUCING</span>
                         <span class="f3 f2-m f2-l mb1 subtitle mb2">MARIA DEVEREUX</span>
                         <span class="mt2 f6 f5-m f5-l sectionbody lh-copy lh-copy-m lh-copy-l">
@@ -159,7 +146,6 @@
                             <a href="https://www.mariadevereux.com" target="_blank" class="learnmore"></a>
                         </span>
                     </div>
-                    <div style="flex-grow: 1;"></div>
                 </div>
             </div>
         </div>

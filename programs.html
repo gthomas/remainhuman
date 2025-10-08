@@ -29,24 +29,12 @@
             }
         }
     </style>
-    <script>
-        window.onload = function () {
-            var height = window.innerHeight;
-            console.log(window.innerHeight);
-            document.getElementsByClassName("hero")[0].style.height = window.innerHeight + "px";
-        }
-    </script>
 </head>
 
 <body>
     <div class="pagecontainer flex flex-column" style="overflow-x: hidden;">
         <!-- TOP PAGE -->
         <div class="flex flex-column page hero">
-            <div class="dn db-m db-l absolute bottom-0 h-100" style="left: 50%; pointer-events: none;">
-                <img class="heroimage" src="./img/hero.png" />
-            </div>
-            <div class="heroimagemobile dn-m dn-l absolute bottom-0 h-75 w-60" style="left: 40%; pointer-events: none;">
-            </div>
             <div>
                 <div class="h4 w-100 flex items-end bb">
                     <div class="pl3 pl5-m pl5-l f4 f2-l f2-m title" style="margin-bottom: -0.20em;">HOW TO STAY</div>
@@ -58,18 +46,21 @@
                     </div>
                 </div>
             </div>
-            <div class="flex flex-column  maincontent w-100 h4">
+            <div class="flex flex-column maincontent w-100">
                 <div class="heroblurb pt5 pt5-m pt5-l f5 f4-m f4-l pl3 pl5-m pl5-l pr3 pr0-m pr0-l w-60 w-25-m w-25-l">
                     Human creativity
                     <span class="white">has never been more important especially in the face of technology.</span>
                 </div>
-                <div style="flex-grow: 1;"></div>
-                <div class="flex items-center flex-row pl3 pl5-m pl5-l h4 w-60 w-20-m w-20-l" style="min-width: 208px;">
+                <div class="flex items-center flex-row pl3 pl5-m pl5-l w-60 w-20-m w-20-l hero-social">
                     <a href="https://open.spotify.com/show/5P6qabdEL76jPmky8eCIWc?si=ed8e0c92cf524fb2"
                         class="h2 w2 social spotify mr3"></a>
                     <a href="https://worldsveryfirst.com" class="h2 w2 social podcast mr3"></a>
                     <a href="https://www.instagram.com/how_to_stay_human/" class="h2 w2 social insta mr3"></a>
                 </div>
+            </div>
+            <div class="heroimagewrap">
+                <img class="heroimage heroimage--desktop dn db-m db-l" src="./img/hero.png" alt="Illustration of the How to Stay Human hero" />
+                <img class="heroimage heroimage--mobile db dn-m dn-l" src="./img/hero.png" alt="Illustration of the How to Stay Human hero" />
             </div>
             <div class="footer w-100">
                 <div class="bottom-0 bt bb h3 w-100">
@@ -99,10 +90,9 @@
                             href="mailto:graham@grahammead.com">CONTACT US</a></span>
                 </div>
             </div>
-            <div class="flex flex-column flex-row-m flex-row-l items-center" style="flex-grow: 1;">
-                <div class="flex items-center h-50 w-100 w-50-m w-50-l h-100-m h-100-l">
-                    <div style="flex-grow: 1;"></div>
-                    <div class="flex flex-column pl3 pl5-m pl5-l pr3 pr5-m pr5-l w-100 w-100-m w-100-l">
+            <div class="split-row flex flex-column flex-row-m flex-row-l" style="flex-grow: 1;">
+                <div class="flex w-100 w-50-m w-50-l split-column">
+                    <div class="flex flex-column split-column__inner pl3 pl5-m pl5-l pr3 pr5-m pr5-l">
                         <span class="f6 f5-m f5-l mb1 sectionheading">HOW TO STAY HUMAN</span>
                         <span class="f3 f2-m f2-l mb1 subtitle">ABOUT OUR PROGRAM</span>
                         <span class="mt3 f6 f5-m f5-l sectionbody lh-copy lh-copy-m lh-copy-l">
@@ -130,197 +120,164 @@
                             </span>
                         </span>
                     </div>
-                    <div style="flex-grow: 1;"></div>
                 </div>
-                <div class="h-50 w-100 w-50-m h-100-m w-50-l h-100-l bb bl-m bl-l picnic"></div>
+                <div class="w-100 w-50-m w-50-l bb bl-m bl-l picnic background-panel"></div>
             </div>
         </div>
         <!-- 3RD PAGE - 30 MINUTE PROGRAMS -->
         <div class="flex flex-column page bb">
-            <div class="flex flex-column flex-row-m flex-row-l items-end" style="flex-grow: 1;">
-                <div class="flex items-center h-50 w-100 w-50-m h-100-m w-50-l h-100-l bb br-m br-l bg-yellow"
-                    style="flex-grow: 1;">
-                    <div style="flex-grow: 1;"></div>
-                    <div class="flex flex-column w-100 w-100-m w-100-l bio">
-                        <div class="flex flex-row w-100">
-                            <div style="flex-grow: 1;"></div>
-                            <div class="flex flex-column">
-                                <span class="f6 f5-m f5-l mb1 sectionheading">30 MINUTE</span>
-                                <span class="f3 f2-m f2-l mb1 subtitle mb2">ONLINE MODULES</span>
-                            </div>
-                            <div style="flex-grow: 1;"></div>
-                        </div>
+            <div class="split-row flex flex-column flex-row-m flex-row-l" style="flex-grow: 1;">
+                <div class="flex w-100 w-50-m w-50-l bb br-m br-l bg-yellow split-column">
+                    <div class="flex flex-column split-column__inner bio tc">
+                        <span class="f6 f5-m f5-l mb1 sectionheading">30 MINUTE</span>
+                        <span class="f3 f2-m f2-l mb1 subtitle mb2">ONLINE MODULES</span>
                     </div>
-                    <div style="flex-grow: 1;"></div>
                 </div>
-                <div class="flex items-center h-50 w-100 w-50-m w-50-l h-100-m h-100-l pv4">
-                    <div class="flex flex-column h-100 w-100 w-100-m w-100-l bio">
-                        <div style="flex-grow: 1;"></div>
-                        <span class="f6 f5-m f5-l mb1 w-80 ph3 ph5-m ph5-l sectionheading yellow">MODULE ONE</span>
-                        <span class="f3 f2-m f2-l mb1 w-80 ph3 ph5-m ph5-l subtitle mb2 yellow"> SUPERCHARGING YOUR
-                            CREATIVE MIND</span>
-                        <span class="mt2 w-80 ph3 ph5-m ph5-l f6 f5-m f5-l sectionbody lh-copy lh-copy-m lh-copy-l">
-                            Reigning in the mind: The benefit of becoming still in theory and in practice.
-                            Experience a sense of being, a clearing of the mind for optimal function and better sleep.
-                            Changing the trajectory of thought to identify and intercept redundant or addictive
-                            patterns of thinking.
-                        </span>
-                        <div style="flex-grow: 1;"></div>
-                        <span class="w-100 bb yellow mv4"></span>
-                        <div style="flex-grow: 1;"></div>
-                        <span class="f6 f5-m f5-l mb1 w-80 ph3 ph5-m ph5-l sectionheading yellow">MODULE TWO</span>
-                        <span class="f3 f2-m f2-l mb1 w-80 ph3 ph5-m ph5-l subtitle mb2 yellow">SELF
-                            RESPONSIBILITY</span>
-                        <span class="mt2 mb3 w-80 ph3 ph5-m ph5-l f6 f5-m f5-l sectionbody lh-copy lh-copy-m lh-copy-l">
-                            Practical development of emotional IQ and accountability. Looking inward at the source of
-                            our
-                            reactions rather than simply outward at our triggers.
-                            Experience the importance of integrity, courage and humility, honesty and truth, a
-                            willingness
-                            to 'feel', and how responding consciously to challenges can overcome default nervous system
-                            tendencies.
-                        </span>
-                        <div style="flex-grow: 1;"></div>
+                <div class="flex w-100 w-50-m w-50-l pv4 split-column">
+                    <div class="split-column__inner bio module-column">
+                        <div class="module w-80 ph3 ph5-m ph5-l">
+                            <span class="f6 f5-m f5-l mb1 sectionheading yellow">MODULE ONE</span>
+                            <span class="f3 f2-m f2-l mb1 subtitle mb2 yellow"> SUPERCHARGING YOUR
+                                CREATIVE MIND</span>
+                            <span class="mt2 f6 f5-m f5-l sectionbody lh-copy lh-copy-m lh-copy-l">
+                                Reigning in the mind: The benefit of becoming still in theory and in practice.
+                                Experience a sense of being, a clearing of the mind for optimal function and better sleep.
+                                Changing the trajectory of thought to identify and intercept redundant or addictive
+                                patterns of thinking.
+                            </span>
+                        </div>
+                        <span class="program-divider" aria-hidden="true"></span>
+                        <div class="module w-80 ph3 ph5-m ph5-l">
+                            <span class="f6 f5-m f5-l mb1 sectionheading yellow">MODULE TWO</span>
+                            <span class="f3 f2-m f2-l mb1 subtitle mb2 yellow">SELF
+                                RESPONSIBILITY</span>
+                            <span class="mt2 mb0 f6 f5-m f5-l sectionbody lh-copy lh-copy-m lh-copy-l">
+                                Practical development of emotional IQ and accountability. Looking inward at the source of
+                                our
+                                reactions rather than simply outward at our triggers.
+                                Experience the importance of integrity, courage and humility, honesty and truth, a
+                                willingness
+                                to 'feel', and how responding consciously to challenges can overcome default nervous system
+                                tendencies.
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- 4TH PAGE - MARIA -->
         <div class="flex flex-column page nosign" style="overflow-x: hidden;">
-            <div class="flex flex-column flex-row-m flex-row-l items-end" style="flex-grow: 1;">
-                <div class="flex items-center h-50 w-100 w-50-m w-50-l h-100-m h-100-l bb bn-m bn-l pv4">
-                    <div class="flex flex-column h-100 w-100 w-100-m w-100-l bio">
-                        <div style="flex-grow: 1;"></div>
-                        <span class="f6 f5-m f5-l mb1 w-80 ph3 ph5-m ph5-l sectionheading yellow">MODULE THREE</span>
-                        <span class="f3 f2-m f2-l mb1 w-80 ph3 ph5-m ph5-l subtitle mb2 yellow">HUMAN
-                            RELATIONSHIP</span>
-                        <span class="mt2 w-80 ph3 ph5-m ph5-l f6 f5-m f5-l sectionbody lh-copy lh-copy-m lh-copy-l">
-                            Self-awareness, self-responsibility and freedom through relationship.
-                            Experience clarity in how to utilize relationship as a powerful and consistent catalyst
-                            for internal growth, deep insight into your own humanity and a way of liberating your
-                            creativity energy
-                        </span>
-                        <div style="flex-grow: 1;"></div>
-                        <span class="w-100 bb yellow mv4"></span>
-                        <div style="flex-grow: 1;"></div>
-                        <span class="f6 f5-m f5-l mb1 w-80 ph3 ph5-m ph5-l sectionheading yellow">MODULE FOUR</span>
-                        <span class="f3 f2-m f2-l mb1 w-80 ph3 ph5-m ph5-l subtitle mb2 yellow">HUMAN RESOURCE</span>
-                        <span class="mt2 mb3 w-80 ph3 ph5-m ph5-l f6 f5-m f5-l sectionbody lh-copy lh-copy-m lh-copy-l">
-                            Nurturing the body to settle the mind.
-                            Experience wholesome, sustainable ways to develop and grow your own internal creative energy
-                            resource,
-                            conserving energy, cultivating energy and identifying behaviours that rob you of this
-                            precious human resource.
-                        </span>
-                        <div style="flex-grow: 1;"></div>
-                    </div>
-                </div>
-                <div class="dn flex-m flex-l items-center h-50 w-100 w-50-m h-100-m w-50-l h-100-l bb br-m br-l bg-yellow"
-                    style="flex-grow: 1;">
-                    <div style="flex-grow: 1;"></div>
-                    <div class="flex flex-column w-100 w-100-m w-100-l bio">
-                        <div class="flex flex-row w-100">
-                            <div style="flex-grow: 1;"></div>
-                            <div class="flex flex-column">
-                                <span class="f6 f5-m f5-l mb1 sectionheading">30 MINUTE</span>
-                                <span class="f3 f2-m f2-l mb1 subtitle mb2">ONLINE MODULES</span>
-                            </div>
-                            <div style="flex-grow: 1;"></div>
+            <div class="split-row flex flex-column flex-row-m flex-row-l" style="flex-grow: 1;">
+                <div class="flex w-100 w-50-m w-50-l bb bn-m bn-l pv4 split-column">
+                    <div class="split-column__inner bio module-column">
+                        <div class="module w-80 ph3 ph5-m ph5-l">
+                            <span class="f6 f5-m f5-l mb1 sectionheading yellow">MODULE THREE</span>
+                            <span class="f3 f2-m f2-l mb1 subtitle mb2 yellow">HUMAN
+                                RELATIONSHIP</span>
+                            <span class="mt2 f6 f5-m f5-l sectionbody lh-copy lh-copy-m lh-copy-l">
+                                Self-awareness, self-responsibility and freedom through relationship.
+                                Experience clarity in how to utilize relationship as a powerful and consistent catalyst
+                                for internal growth, deep insight into your own humanity and a way of liberating your
+                                creativity energy
+                            </span>
+                        </div>
+                        <span class="program-divider" aria-hidden="true"></span>
+                        <div class="module w-80 ph3 ph5-m ph5-l">
+                            <span class="f6 f5-m f5-l mb1 sectionheading yellow">MODULE FOUR</span>
+                            <span class="f3 f2-m f2-l mb1 subtitle mb2 yellow">HUMAN RESOURCE</span>
+                            <span class="mt2 mb0 f6 f5-m f5-l sectionbody lh-copy lh-copy-m lh-copy-l">
+                                Nurturing the body to settle the mind.
+                                Experience wholesome, sustainable ways to develop and grow your own internal creative energy
+                                resource,
+                                conserving energy, cultivating energy and identifying behaviours that rob you of this
+                                precious human resource.
+                            </span>
                         </div>
                     </div>
-                    <div style="flex-grow: 1;"></div>
+                </div>
+                <div class="flex-m flex-l w-100 w-50-m w-50-l bb br-m br-l bg-yellow split-column dn">
+                    <div class="flex flex-column split-column__inner bio tc">
+                        <span class="f6 f5-m f5-l mb1 sectionheading">30 MINUTE</span>
+                        <span class="f3 f2-m f2-l mb1 subtitle mb2">ONLINE MODULES</span>
+                    </div>
                 </div>
             </div>
         </div>
         <!-- 3RD PAGE - GRAHAM -->
         <div class="flex flex-column page nosign bb">
-            <div class="flex flex-column flex-row-m flex-row-l" style="flex-grow: 1;">
-                <div class="dn flex-m flex-l items-center h-50 w-100 w-50-m h-100-m w-50-l h-100-l bb br-m br-l bg-yellow"
-                    style="flex-grow: 1;">
-                    <div style="flex-grow: 1;"></div>
-                    <div class="flex flex-column w-100 w-100-m w-100-l bio">
-                        <div class="flex flex-row w-100">
-                            <div style="flex-grow: 1;"></div>
-                            <div class="flex flex-column">
-                                <span class="f6 f5-m f5-l mb1 sectionheading">30 MINUTE</span>
-                                <span class="f3 f2-m f2-l mb1 subtitle mb2">ONLINE MODULES</span>
-                            </div>
-                            <div style="flex-grow: 1;"></div>
-                        </div>
+            <div class="split-row flex flex-column flex-row-m flex-row-l" style="flex-grow: 1;">
+                <div class="flex-m flex-l w-100 w-50-m w-50-l bb br-m br-l bg-yellow split-column dn">
+                    <div class="flex flex-column split-column__inner bio tc">
+                        <span class="f6 f5-m f5-l mb1 sectionheading">30 MINUTE</span>
+                        <span class="f3 f2-m f2-l mb1 subtitle mb2">ONLINE MODULES</span>
                     </div>
-                    <div style="flex-grow: 1;"></div>
                 </div>
-                <div class="flex items-center h-50 w-100 w-50-m w-50-l h-100-m h-100-l pv4">
-                    <div class="flex flex-column h-100 w-100 w-100-m w-100-l bio">
-                        <div style="flex-grow: 1;"></div>
-                        <span class="f6 f5-m f5-l mb1 w-80 ph3 ph5-m ph5-l sectionheading yellow">MODULE FIVE</span>
-                        <span class="f3 f2-m f2-l mb1 w-80 ph3 ph5-m ph5-l subtitle mb2 yellow">THE ART OF
-                            OBSERVATION</span>
-                        <span class="mt2 w-80 ph3 ph5-m ph5-l f6 f5-m f5-l sectionbody lh-copy lh-copy-m lh-copy-l">
-                            Skillful observation of your mind can lead to improved mental and emotional stability,
-                            energy and creativity.
-                            Experience the nature of authenticity and explore the easeful state at the heart of
-                            non-algorithm-based creativity.
-                        </span>
-                        <div style="flex-grow: 1;"></div>
-                        <span class="w-100 bb yellow mv4"></span>
-                        <div style="flex-grow: 1;"></div>
-                        <span class="f6 f5-m f5-l mb1 w-80 ph3 ph5-m ph5-l sectionheading yellow"><a
-                                href="https://grahammead.com/">MODULE SIX</a></span>
-                        <span class="f3 f2-m f2-l mb1 w-80 ph3 ph5-m ph5-l subtitle mb2 yellow"><a
-                                href="https://grahammead.com/">InnerSense. HOW TO STAY
-                                HUMAN IN THE LONG RUN</a></span>
-                        <span class="mt2 mb3 w-80 ph3 ph5-m ph5-l f6 f5-m f5-l sectionbody lh-copy lh-copy-m lh-copy-l">
-                            Introduction to the full 9-week self-guided online intensive program.
-                            Experience a developing sense of ease and safety in the body and stability in the mind.
-                            Maintaining openness and a stable connection to our humanity to liberate our creativity
-                        </span>
-                        <div style="flex-grow: 1;"></div>
+                <div class="flex w-100 w-50-m w-50-l pv4 split-column">
+                    <div class="split-column__inner bio module-column">
+                        <div class="module w-80 ph3 ph5-m ph5-l">
+                            <span class="f6 f5-m f5-l mb1 sectionheading yellow">MODULE FIVE</span>
+                            <span class="f3 f2-m f2-l mb1 subtitle mb2 yellow">THE ART OF
+                                OBSERVATION</span>
+                            <span class="mt2 f6 f5-m f5-l sectionbody lh-copy lh-copy-m lh-copy-l">
+                                Skillful observation of your mind can lead to improved mental and emotional stability,
+                                energy and creativity.
+                                Experience the nature of authenticity and explore the easeful state at the heart of
+                                non-algorithm-based creativity.
+                            </span>
+                        </div>
+                        <span class="program-divider" aria-hidden="true"></span>
+                        <div class="module w-80 ph3 ph5-m ph5-l">
+                            <span class="f6 f5-m f5-l mb1 sectionheading yellow"><a
+                                    href="https://grahammead.com/">MODULE SIX</a></span>
+                            <span class="f3 f2-m f2-l mb1 subtitle mb2 yellow"><a
+                                    href="https://grahammead.com/">InnerSense. HOW TO STAY
+                                    HUMAN IN THE LONG RUN</a></span>
+                            <span class="mt2 mb0 f6 f5-m f5-l sectionbody lh-copy lh-copy-m lh-copy-l">
+                                Introduction to the full 9-week self-guided online intensive program.
+                                Experience a developing sense of ease and safety in the body and stability in the mind.
+                                Maintaining openness and a stable connection to our humanity to liberate our creativity
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- 4TH PAGE - MARIA -->
         <div class="flex flex-column page" style="overflow-x: hidden;">
-            <div class="flex flex-row-m flex-row-l items-end flex-column-reverse flex-column-m flex-column-l"
+            <div class="split-row flex flex-row-m flex-row-l flex-column-reverse flex-column-m flex-column-l"
                 style="flex-grow: 1;">
-                <div class="flex items-center h-50 w-100 w-50-m w-50-l h-100-m h-100-l">
-                    <div style="flex-grow: 1;"></div>
-                    <div class="flex flex-column w-90 w-60-m w-60-l bio">
-                        <span class="f6 f5-m f5-l mb1 sectionheading yellow">HOW TO STAY HUMAN</span>
-                        <span class="f3 f2-m f2-l subtitle yellow">THE ULTIMATE</span>
-                        <span class="f3 f2-m f2-l subtitle mb2 yellow">HUMAN EXPERIENCE</span>
-                        <span class="mt2 f6 f5-m f5-l sectionbody lh-solid lh-copy-m lh-copy-l">
-                            Live presentations
-                            <br /><br />
-                            The InnerSense program
-                            <br /><br />
-                            In-person workshops and retreats
-                            <br /><br />
-                            Conscious Leadership programs
-                            <span class="button w4 mt4 flex flex-column">
-                                <a href="mailto:info@howtostayhuman.com" target="_blank" class="learnmore"></a>
+                <div class="flex w-100 w-50-m w-50-l split-column">
+                    <div class="split-column__inner bio module-column module-column--tight">
+                        <div class="module w-90 w-60-m w-60-l">
+                            <span class="f6 f5-m f5-l mb1 sectionheading yellow">HOW TO STAY HUMAN</span>
+                            <span class="f3 f2-m f2-l subtitle yellow">THE ULTIMATE</span>
+                            <span class="f3 f2-m f2-l subtitle mb2 yellow">HUMAN EXPERIENCE</span>
+                            <span class="mt2 f6 f5-m f5-l sectionbody lh-solid lh-copy-m lh-copy-l">
+                                Live presentations
+                                <br /><br />
+                                The InnerSense program
+                                <br /><br />
+                                In-person workshops and retreats
+                                <br /><br />
+                                Conscious Leadership programs
+                                <span class="button w4 mt4 flex flex-column">
+                                    <a href="mailto:info@howtostayhuman.com" target="_blank" class="learnmore"></a>
+                                </span>
                             </span>
-                        </span>
-                    </div>
-                    <div style="flex-grow: 1;"></div>
-                </div>
-                <div class="flex items-center h-50 w-100 w-50-m h-100-m w-50-l h-100-l bb br-m br-l bg-yellow"
-                    style="flex-grow: 1;">
-                    <div style="flex-grow: 1;"></div>
-                    <div class="flex flex-column w-100 w-100-m w-100-l bio">
-                        <div class="flex flex-row w-100">
-                            <div style="flex-grow: 1;"></div>
-                            <div class="flex flex-column">
-                                <span class="f6 f5-m f5-l mb1 sectionheading">FIND EVENT IN YOUR AREA</span>
-                                <span class="f3 f2-m f2-l mb1 subtitle mb2">IN PERSON WORKSHOPS</span>
-                                <span class="f6 f5-m f5-l mb1 sectionheading"><a
-                                        href="mailto:graham@grahammead.com">FIND OUT MORE</a></span>
-                            </div>
-                            <div style="flex-grow: 1;"></div>
                         </div>
                     </div>
-                    <div style="flex-grow: 1;"></div>
+                </div>
+                <div class="flex w-100 w-50-m w-50-l bb br-m br-l bg-yellow split-column">
+                    <div class="split-column__inner bio tc">
+                        <div class="module">
+                            <span class="f6 f5-m f5-l mb1 sectionheading">FIND EVENT IN YOUR AREA</span>    
+                            <br />
+                            <span class="f3 f2-m f2-l mb1 subtitle mb2">IN PERSON WORKSHOPS</span>
+                            <br />
+                            <span class="f6 f5-m f5-l mb1 sectionheading"><a
+                                    href="mailto:graham@grahammead.com">FIND OUT MORE</a></span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
