@@ -99,7 +99,7 @@ a.active {
 }
 
 .picnic {
-    background-image: url(../img/COMPUTER.gif);
+    background-image: url(../img/computer.webp);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -197,7 +197,7 @@ body {
     max-width: min(90%, 34rem);
     height: auto;
     object-fit: contain;
-    object-position: bottom center;
+    object-position: bottom right;
 }
 
 .heroimage--mobile {
