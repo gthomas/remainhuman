@@ -43,14 +43,21 @@ a.active {
 
 .hero {
     background-image: url(../img/BGTOP.png);
-    background-position: left top;
+    background-position: left bottom;
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-repeat: no-repeat;
-    min-height: 100vh;
-    min-height: 100dvh;
+    min-height: calc(100vh + var(--hero-marquee-height));
+    min-height: calc(100dvh + var(--hero-marquee-height));
+    padding-bottom: var(--hero-marquee-height);
     position: relative;
     overflow: visible;
+    --hero-header-depth: clamp(5rem, 16vw, 7rem);
+}
+
+.hero > div:first-child {
+    position: relative;
+    z-index: 3;
 }
 
 .about {
@@ -183,30 +190,43 @@ body {
 
 .heroimagewrap {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: flex-end;
     pointer-events: none;
-    padding: 1.5rem 1rem 0;
+    padding: 1.5rem 0 0 clamp(2.5rem, 12vw, 4.5rem);
     gap: 1rem;
-    position: relative;
-    z-index: 2;
-    transform: translateY(var(--hero-marquee-height));
+    position: absolute;
+    inset-inline-end: 0;
+    bottom: var(--hero-marquee-height);
+    width: 100%;
+    z-index: 1;
 }
 
 .heroimage {
-    max-width: min(90%, 34rem);
+    width: auto;
     height: auto;
     object-fit: contain;
     object-position: bottom right;
 }
 
 .heroimage--mobile {
-    max-width: 75%;
+    margin-left: auto;
+    max-width: clamp(14rem, 64vw, 20rem);
+    height: clamp(
+        20rem,
+        calc(100vh - var(--hero-header-depth) - 0.5rem),
+        calc(100vh - var(--hero-header-depth) + 0.75rem)
+    );
     display: block;
 }
 
 .heroimage--desktop {
-    max-width: min(80%, 42rem);
+    max-width: none;
+    height: clamp(
+        36rem,
+        calc(100vh - var(--hero-header-depth) + 0.5rem),
+        calc(100vh - var(--hero-header-depth) + 1.5rem)
+    );
     display: none;
 }
 
@@ -290,17 +310,25 @@ body {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .heroimagewrap {
-        padding: 2.5rem 2rem 0;
+    .hero .maincontent {
+        --hero-content-offset: clamp(1.5rem, 7vw, 5rem);
     }
 
-    .heroimage {
-        max-width: min(80%, 36rem);
+    .hero .heroblurb {
+        padding-left: var(--hero-content-offset);
+    }
+
+    .heroimagewrap {
+        padding: 0 0 0 2rem;
     }
 
     .heroimage--desktop {
-        max-width: min(70%, 46rem);
         display: block;
+        height: clamp(
+            38rem,
+            calc(100vh - var(--hero-header-depth) + 0.5rem),
+            calc(100vh - var(--hero-header-depth) + 1.5rem)
+        );
     }
 
     .heroimage--mobile {
@@ -308,7 +336,14 @@ body {
     }
 
     .hero .hero-social {
-        transform: translateY(calc(var(--hero-marquee-height) * 10 + 3rem));
+        position: absolute;
+        left: 0;
+        bottom: calc(var(--hero-marquee-height) + 1.25rem);
+        margin-top: 0;
+        transform: none;
+        padding-left: var(--hero-content-offset);
+        padding-right: 0;
+        width: max-content;
     }
 
     .split-column {
@@ -326,17 +361,29 @@ body {
 }
 
 @media screen and (min-width: 60em) {
-    .heroimagewrap {
-        padding: 3rem 3rem 0;
+    .hero {
+        --hero-header-depth: clamp(6rem, 12vw, 8rem);
     }
 
-    .heroimage {
-        max-width: min(70%, 40rem);
+    .hero .maincontent {
+        --hero-content-offset: clamp(2.5rem, 6vw, 6rem);
+    }
+
+    .hero .heroblurb {
+        padding-left: var(--hero-content-offset);
+    }
+
+    .heroimagewrap {
+        padding: 0 0 0 3rem;
     }
 
     .heroimage--desktop {
-        max-width: min(60%, 48rem);
         display: block;
+        height: clamp(
+            40rem,
+            calc(100vh - var(--hero-header-depth) + 0.5rem),
+            calc(100vh - var(--hero-header-depth) + 1.5rem)
+        );
     }
 
     .heroimage--mobile {
@@ -367,15 +414,19 @@ body {
     flex-direction: column;
     justify-content: space-between;
     min-height: clamp(22rem, 55vh, 38rem);
+    position: relative;
+    z-index: 2;
 }
 
 .hero-social {
-    margin-top: auto;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
     display: flex;
     align-items: center;
     gap: 1rem;
     min-width: 13rem;
-    transform: translateY(calc(var(--hero-marquee-height) * 4 + 2rem));
+    align-self: flex-start;
+    transform: none;
 }
 
 .hero-social a {
@@ -436,12 +487,13 @@ a:visited {
 
     .hero {
         background-image: url(../img/BGTOPMOBILE.png);
-        background-position: center top;
+        background-position: center bottom;
         background-size: cover;
-        background-attachment: fixed;
+        background-attachment: scroll;
         background-repeat: no-repeat;
-        min-height: 100vh;
-        min-height: 100dvh;
+        min-height: calc(100vh + var(--hero-marquee-height));
+        min-height: calc(100dvh + var(--hero-marquee-height));
+        padding-bottom: var(--hero-marquee-height);
     }
 
 }
