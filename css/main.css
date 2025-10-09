@@ -193,7 +193,7 @@ body {
     justify-content: flex-end;
     align-items: flex-end;
     pointer-events: none;
-    padding: 1.5rem clamp(0.5rem, 4vw, 1.25rem) 0 clamp(2.5rem, 12vw, 4.5rem);
+    padding: 1.5rem 0 0 clamp(2.5rem, 12vw, 4.5rem);
     gap: 1rem;
     position: absolute;
     inset-inline-end: 0;
