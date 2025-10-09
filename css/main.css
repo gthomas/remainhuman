@@ -311,7 +311,7 @@ body {
     }
 
     .hero .maincontent {
-        --hero-content-offset: clamp(1.5rem, 7vw, 5rem);
+        --hero-content-offset: 4rem;
     }
 
     .hero .heroblurb {
@@ -366,7 +366,7 @@ body {
     }
 
     .hero .maincontent {
-        --hero-content-offset: clamp(2.5rem, 6vw, 6rem);
+        --hero-content-offset: 4rem;
     }
 
     .hero .heroblurb {
