@@ -310,11 +310,19 @@ body {
     .desktop-bumper {
         display: none !important;
     }
+
+    .mobile-order-first {
+        order: -1;
+    }
 }
 
 @media screen and (min-width: 30em) {
     .split-row {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .mobile-order-first {
+        order: 0;
     }
 
     .hero .maincontent {
