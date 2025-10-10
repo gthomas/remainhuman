@@ -323,6 +323,19 @@ body {
         padding: 0 0 0 2rem;
     }
 
+    .heroimage--desktop {
+        display: block;
+        max-height: clamp(
+            38rem,
+            calc(100vh - var(--hero-header-depth) + 0.5rem),
+            calc(100vh - var(--hero-header-depth) + 1.5rem)
+        );
+    }
+
+    .heroimage--mobile {
+        display: none;
+    }
+
     .hero .hero-social {
         position: absolute;
         left: 0;
